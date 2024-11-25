@@ -1,0 +1,10 @@
+MW_AnalogInput.o
+MW_digitalIO.o
+Klimaanlage.o
+Klimaanlage_data.o
+ert_main.o
+mw_mbed_interface.o
+BufferedSerial.o
+mbed_syscalls.o
+SysTickScheduler.o
+m3m4m4f_multitasking.o
