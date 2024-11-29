@@ -13,3 +13,5 @@ Q_max = 5;
 Q_min = -5;
 Temp_max = 50;
 Temp_min = -20;
+DeboucneTime = 100;%ms 
+DebounceCnt = 0;
