@@ -15,3 +15,5 @@ Temp_max = 50;
 Temp_min = -20;
 DeboucneTime = 100; %ms 
 DebounceCnt = 0;
+
+adc_conv = (UpperUserTemp - LowerUserTemp);
