@@ -31,6 +31,11 @@ set_param(0, 'CodeGenFolderStructure', 'ModelSpecific'); % code gen folder named
 % Load model parameter
 load_params;
 
+% Rebuild SIL
+regenerateSIL('tests/unittests/test_ac_controller', 'b2b_ac_controller', 'ac_controller', 'tests/unittests/test_ac_controller', 'ac_controller_SIL');
+%regenerateSIL('tests/integration_test/ACC', 'qualification_test_01', 'ACC_ControlUnit', 'tests/qualification_tests/ACC_SIL', 'ACC_ControlUnit_SIL');
+
+
 %% local functiom
 function createDir(newFolder)
     if ~exist(newFolder, 'dir')
