@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.0
+ * Model version              : 1.12
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Fri Dec  6 16:32:59 2024
+ * C source code generated on : Sun Dec 15 19:54:36 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -55,14 +55,14 @@ static void mdlInitializeConditions(SimStruct *S)
     P_ac_controller0_T *_rtP;
     _rtP = ((P_ac_controller0_T *) ssGetLocalDefaultParam(S));
 
-    /* InitializeConditions for DiscreteIntegrator: '<S2>/Discrete-Time Integrator' */
-    ((int16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
+    /* InitializeConditions for DiscreteIntegrator: '<S1>/Discrete-Time Integrator' */
+    ((uint16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
   } else {
     P_ac_controller0_T *_rtP;
     _rtP = ((P_ac_controller0_T *) ssGetLocalDefaultParam(S));
 
-    /* InitializeConditions for DiscreteIntegrator: '<S2>/Discrete-Time Integrator' */
-    ((int16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
+    /* InitializeConditions for DiscreteIntegrator: '<S1>/Discrete-Time Integrator' */
+    ((uint16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
   }
 }
 
@@ -99,36 +99,34 @@ static void mdlOutputs(SimStruct *S, int_T tid)
   uint16_T tmp;
   _rtP = ((P_ac_controller0_T *) ssGetLocalDefaultParam(S));
   _rtB = ((B_ac_controller0_T *) ssGetLocalBlockIO(S));
-  if (ssIsSampleHit(S, 1, 0)) {
-    /* Sum: '<S2>/Sum1' */
-    _rtB->Sum1 = (int16_T)((*((const uint16_T **)ssGetInputPortSignalPtrs(S, 1))
-      [0] - *((const int16_T **)ssGetInputPortSignalPtrs(S, 0))[0]) >> 1);
 
-    /* Product: '<S2>/Divide' incorporates:
-     *  Constant: '<S2>/Constant'
-     *  Constant: '<S2>/Constant1'
-     */
-    if (_rtP->T_n == 0U) {
-      tmp = MAX_uint16_T;
+  /* Sum: '<S1>/Sum1' */
+  _rtB->Sum1 = (uint16_T)(*((const uint16_T **)ssGetInputPortSignalPtrs(S, 1))[0]
+    - *((const uint16_T **)ssGetInputPortSignalPtrs(S, 0))[0]);
 
-      /* Divide by zero handler */
-    } else {
-      tmp = (uint16_T)((uint32_T)_rtP->K_p / _rtP->T_n);
-    }
+  /* Product: '<S1>/Divide' incorporates:
+   *  Constant: '<S1>/Constant'
+   *  Constant: '<S1>/Constant1'
+   */
+  if (_rtP->T_n == 0U) {
+    tmp = MAX_uint16_T;
 
-    /* Outport: '<Root>/power_cool_heat' incorporates:
-     *  Constant: '<S2>/Constant'
-     *  DiscreteIntegrator: '<S2>/Discrete-Time Integrator'
-     *  Product: '<S2>/Divide'
-     *  Product: '<S2>/Product'
-     *  Product: '<S2>/Product1'
-     *  Sum: '<S2>/Sum'
-     *  Sum: '<S2>/Sum1'
-     */
-    ((int32_T *)ssGetOutputPortSignal(S, 0))[0] = (int32_T)((tmp * ((int16_T *)
-      ssGetDWork(S, 0))[0] * 858993459LL) >> 32) + _rtB->Sum1 * _rtP->K_p;
+    /* Divide by zero handler */
+  } else {
+    tmp = (uint16_T)((uint32_T)_rtP->K_p / _rtP->T_n);
   }
 
+  /* Outport: '<Root>/Q_C//H' incorporates:
+   *  Constant: '<S1>/Constant'
+   *  DiscreteIntegrator: '<S1>/Discrete-Time Integrator'
+   *  Product: '<S1>/Divide'
+   *  Product: '<S1>/Product'
+   *  Product: '<S1>/Product1'
+   *  Sum: '<S1>/Sum'
+   */
+  ((uint32_T *)ssGetOutputPortSignal(S, 0))[0] = (uint32_T)(((uint32_T)tmp *
+    ((uint16_T *)ssGetDWork(S, 0))[0] * 3435973837ULL) >> 35) + (uint32_T)
+    _rtB->Sum1 * _rtP->K_p;
   UNUSED_PARAMETER(tid);
 }
 
@@ -139,14 +137,10 @@ static void mdlUpdate(SimStruct *S, int_T tid)
 {
   B_ac_controller0_T *_rtB;
   _rtB = ((B_ac_controller0_T *) ssGetLocalBlockIO(S));
-  if (ssIsSampleHit(S, 1, 0)) {
-    /* Update for DiscreteIntegrator: '<S2>/Discrete-Time Integrator' incorporates:
-     *  Sum: '<S2>/Sum1'
-     */
-    ((int16_T *)ssGetDWork(S, 0))[0] = (int16_T)(((int16_T *)ssGetDWork(S, 0))[0]
-      + _rtB->Sum1);
-  }
 
+  /* Update for DiscreteIntegrator: '<S1>/Discrete-Time Integrator' */
+  ((uint16_T *)ssGetDWork(S, 0))[0] = (uint16_T)((uint32_T)((uint16_T *)
+    ssGetDWork(S, 0))[0] + _rtB->Sum1);
   UNUSED_PARAMETER(tid);
 }
 
@@ -173,11 +167,9 @@ static void mdlTerminate(SimStruct *S)
 /* Function to initialize sizes. */
 static void mdlInitializeSizes(SimStruct *S)
 {
-  ssSetNumSampleTimes(S, 2);           /* Number of sample times */
+  ssSetNumSampleTimes(S, 1);           /* Number of sample times */
   ssSetNumContStates(S, 0);            /* Number of continuous states */
   ssSetNumNonsampledZCs(S, 0);         /* Number of nonsampled ZCs */
-  ssSetZCCacheNeedsReset(S, 0);
-  ssSetDerivCacheNeedsReset(S, 0);
 
   /* Number of output ports */
   if (!ssSetNumOutputPorts(S, 1))
@@ -187,29 +179,10 @@ static void mdlInitializeSizes(SimStruct *S)
   if (!ssSetOutputPortVectorDimension(S, 0, 1))
     return;
   if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
-
-#if defined (MATLAB_MEX_FILE)
-
-    {
-      DTypeId dataTypeIdReg =
-        ssRegisterDataTypeFxpFSlopeFixExpBias(
-        S,
-        1,
-        32,
-        1.0,
-        1,
-        0.0,
-        0
-      /* false means do NOT obey data type override setting for this subsystem */
-        );
-      ssSetOutputPortDataType(S, 0, dataTypeIdReg );
-    }
-
-#endif
-
+    ssSetOutputPortDataType(S, 0, SS_UINT32);
   }
 
-  ssSetOutputPortSampleTime(S, 0, 0.2);
+  ssSetOutputPortSampleTime(S, 0, 0.1);
   ssSetOutputPortOffsetTime(S, 0, 0.0);
   ssSetOutputPortOptimOpts(S, 0, SS_REUSABLE_AND_LOCAL);
 
@@ -222,11 +195,11 @@ static void mdlInitializeSizes(SimStruct *S)
     if (!ssSetInputPortVectorDimension(S, 0, 1))
       return;
     if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
-      ssSetInputPortDataType(S, 0, SS_INT16);
+      ssSetInputPortDataType(S, 0, SS_UINT16);
     }
 
     ssSetInputPortDirectFeedThrough(S, 0, 1);
-    ssSetInputPortSampleTime(S, 0, 0.2);
+    ssSetInputPortSampleTime(S, 0, 0.1);
     ssSetInputPortOffsetTime(S, 0, 0.0);
     ssSetInputPortOverWritable(S, 0, 0);
     ssSetInputPortOptimOpts(S, 0, SS_NOT_REUSABLE_AND_GLOBAL);
@@ -241,7 +214,7 @@ static void mdlInitializeSizes(SimStruct *S)
     }
 
     ssSetInputPortDirectFeedThrough(S, 1, 1);
-    ssSetInputPortSampleTime(S, 1, 0.2);
+    ssSetInputPortSampleTime(S, 1, 0.1);
     ssSetInputPortOffsetTime(S, 1, 0.0);
     ssSetInputPortOverWritable(S, 1, 0);
     ssSetInputPortOptimOpts(S, 1, SS_NOT_REUSABLE_AND_GLOBAL);
@@ -250,25 +223,20 @@ static void mdlInitializeSizes(SimStruct *S)
   ssSetRTWGeneratedSFcn(S, 1);         /* Generated S-function */
 
   /* DWork */
-  if (!ssSetNumDWork(S, 3)) {
+  if (!ssSetNumDWork(S, 2)) {
     return;
   }
 
-  /* '<S2>/Discrete-Time Integrator': DSTATE */
+  /* '<S1>/Discrete-Time Integrator': DSTATE */
   ssSetDWorkName(S, 0, "DWORK0");
   ssSetDWorkWidth(S, 0, 1);
-  ssSetDWorkDataType(S, 0, SS_INT16);
+  ssSetDWorkDataType(S, 0, SS_UINT16);
   ssSetDWorkUsedAsDState(S, 0, 1);
 
-  /* '<S2>/Sum1': DWORK1 */
+  /* '<S1>/Sum': DWORK1 */
   ssSetDWorkName(S, 1, "DWORK1");
   ssSetDWorkWidth(S, 1, 1);
-  ssSetDWorkDataType(S, 1, SS_INT32);
-
-  /* '<S2>/Sum': DWORK1 */
-  ssSetDWorkName(S, 2, "DWORK2");
-  ssSetDWorkWidth(S, 2, 1);
-  ssSetDWorkDataType(S, 2, SS_INT32);
+  ssSetDWorkDataType(S, 1, SS_UINT32);
 
   /* Tunable Parameters */
   ssSetNumSFcnParams(S, 0);
@@ -312,12 +280,10 @@ static void mdlInitializeSizes(SimStruct *S)
 static void mdlInitializeSampleTimes(SimStruct *S)
 {
   /* task periods */
-  ssSetSampleTime(S, 0, 0.0);
-  ssSetSampleTime(S, 1, 0.2);
+  ssSetSampleTime(S, 0, 0.1);
 
   /* task offsets */
-  ssSetOffsetTime(S, 0, 1.0);
-  ssSetOffsetTime(S, 1, 0.0);
+  ssSetOffsetTime(S, 0, 0.0);
 }
 
 #if defined(MATLAB_MEX_FILE)

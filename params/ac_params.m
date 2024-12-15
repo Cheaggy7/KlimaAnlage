@@ -13,7 +13,9 @@ Q_max = 5;
 Q_min = -5;
 Temp_max = 50;
 Temp_min = -20;
-DeboucneTime = 100; %ms 
+DebounceTime = 100; %ms 
 DebounceCnt = 0;
-
 adc_conv = (UpperUserTemp - LowerUserTemp);
+
+% general parameters
+acTs = 100e-3; % Sample time of AC (air conditioning)

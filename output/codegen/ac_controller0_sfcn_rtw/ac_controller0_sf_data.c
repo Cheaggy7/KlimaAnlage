@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.0
+ * Model version              : 1.12
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Fri Dec  6 16:32:59 2024
+ * C source code generated on : Sun Dec 15 19:54:36 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -24,17 +24,17 @@
 /* Block parameters (default storage) */
 P_ac_controller0_T ac_controller0_DefaultP = {
   /* Variable: K_p
-   * Referenced by: '<S2>/Constant'
+   * Referenced by: '<S1>/Constant'
    */
   5000U,
 
   /* Variable: T_n
-   * Referenced by: '<S2>/Constant1'
+   * Referenced by: '<S1>/Constant1'
    */
   1800U,
 
   /* Computed Parameter: DiscreteTimeIntegrator_IC
-   * Referenced by: '<S2>/Discrete-Time Integrator'
+   * Referenced by: '<S1>/Discrete-Time Integrator'
    */
-  0
+  0U
 };

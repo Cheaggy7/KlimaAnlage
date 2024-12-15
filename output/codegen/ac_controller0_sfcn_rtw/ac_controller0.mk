@@ -84,7 +84,7 @@ MATLAB_ROOT             = C:\Program Files\MATLAB\R2023b
 ALT_MATLAB_ROOT         = C:\PROGRA~1\MATLAB\R2023b
 START_DIR               = C:\Users\kilia\Desktop\UNI\Matlab\MODELL~1\KLIMAA~1.2\KLIMAA~1\output\codegen
 S_FUNCTIONS_LIB         = 
-NUMST                   = 2
+NUMST                   = 1
 NCSTATES                = 0
 BUILDARGS               =  CREATEMODEL=1 USEPARAMVALUES=0 OPTS="-DTID01EQ=0"
 MULTITASKING            = 0

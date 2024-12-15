@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.0
+ * Model version              : 1.12
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Fri Dec  6 16:32:59 2024
+ * C source code generated on : Sun Dec 15 19:54:36 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -62,31 +62,31 @@ typedef struct {
 
 /* Block signals (default storage) */
 typedef struct {
-  int16_T Sum1;                        /* '<S2>/Sum1' */
+  uint16_T Sum1;                       /* '<S1>/Sum1' */
 } B_ac_controller0_T;
 
 /* External inputs (root inport signals with default storage) */
 typedef struct {
-  int16_T *current_temp;               /* '<Root>/current_temp' */
-  uint16_T *sampled_target_temp;       /* '<Root>/sampled_target_temp' */
+  uint16_T *current_temperature;       /* '<Root>/current_temperature' */
+  uint16_T *sampled_target_temperature;/* '<Root>/sampled_target_temperature' */
 } ExternalUPtrs_ac_controller0_T;
 
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
-  int32_T *power_cool_heat;            /* '<Root>/power_cool_heat' */
+  uint32_T *Q_CH;                      /* '<Root>/Q_C//H' */
 } ExtY_ac_controller0_T;
 
 /* Parameters (default storage) */
 struct P_ac_controller0_T_ {
   uint16_T K_p;                        /* Variable: K_p
-                                        * Referenced by: '<S2>/Constant'
+                                        * Referenced by: '<S1>/Constant'
                                         */
   uint16_T T_n;                        /* Variable: T_n
-                                        * Referenced by: '<S2>/Constant1'
+                                        * Referenced by: '<S1>/Constant1'
                                         */
-  int16_T DiscreteTimeIntegrator_IC;
+  uint16_T DiscreteTimeIntegrator_IC;
                                 /* Computed Parameter: DiscreteTimeIntegrator_IC
-                                 * Referenced by: '<S2>/Discrete-Time Integrator'
+                                 * Referenced by: '<S1>/Discrete-Time Integrator'
                                  */
 };
 
@@ -111,6 +111,5 @@ extern P_ac_controller0_T ac_controller0_DefaultP;
  *
  * '<Root>' : 'test_ac_controller'
  * '<S1>'   : 'test_ac_controller/ac_controller'
- * '<S2>'   : 'test_ac_controller/ac_controller/ac_controller'
  */
 #endif                                 /* RTW_HEADER_ac_controller0_sf_h_ */
