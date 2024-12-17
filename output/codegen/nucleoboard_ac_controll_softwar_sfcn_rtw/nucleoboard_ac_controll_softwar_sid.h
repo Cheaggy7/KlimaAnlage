@@ -7,9 +7,9 @@
  *
  * Code generation for model "nucleoboard_ac_controll_softwar_sf".
  *
- * Model version              : 1.50
+ * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Tue Dec 17 18:12:01 2024
+ * C source code generated on : Wed Dec 18 00:22:01 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -47,9 +47,9 @@
       &nucleoboard_ac_controll_softwar_DefaultP);
 
     /* model checksums */
-    ssSetChecksumVal(rts, 0, 429764183U);
-    ssSetChecksumVal(rts, 1, 628712952U);
-    ssSetChecksumVal(rts, 2, 1612258509U);
-    ssSetChecksumVal(rts, 3, 1464061807U);
+    ssSetChecksumVal(rts, 0, 3045000209U);
+    ssSetChecksumVal(rts, 1, 1860631745U);
+    ssSetChecksumVal(rts, 2, 3947402030U);
+    ssSetChecksumVal(rts, 3, 3411914138U);
   }
 }

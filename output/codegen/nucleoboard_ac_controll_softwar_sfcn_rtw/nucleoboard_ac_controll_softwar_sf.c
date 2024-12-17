@@ -7,9 +7,9 @@
  *
  * Code generation for model "nucleoboard_ac_controll_softwar_sf".
  *
- * Model version              : 1.50
+ * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Tue Dec 17 18:12:01 2024
+ * C source code generated on : Wed Dec 18 00:22:01 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -81,7 +81,7 @@ static void mdlInitializeConditions(SimStruct *S)
     _rtB = ((B_nucleoboard_ac_controll_softwar_T *) ssGetLocalBlockIO(S));
 
     /* InitializeConditions for DiscreteIntegrator: '<S2>/Discrete-Time Integrator' */
-    ((real_T *)ssGetDWork(S, 8))[0] = _rtP->DiscreteTimeIntegrator_IC;
+    ((real_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
 
     /* SystemInitialize for IfAction SubSystem: '<S5>/If Action Subsystem1' */
     /* SystemInitialize for SignalConversion generated from: '<S7>/In1' incorporates:
@@ -111,7 +111,7 @@ static void mdlInitializeConditions(SimStruct *S)
     _rtP = ((P_nucleoboard_ac_controll_softwar_T *) ssGetLocalDefaultParam(S));
 
     /* InitializeConditions for DiscreteIntegrator: '<S2>/Discrete-Time Integrator' */
-    ((real_T *)ssGetDWork(S, 8))[0] = _rtP->DiscreteTimeIntegrator_IC;
+    ((real_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
   }
 }
 
@@ -122,14 +122,14 @@ static void mdlDisable(SimStruct *S)
 {
   /* Disable for If: '<S5>/If' */
   ssSetBlockStateForSolverChangedAtMajorStep(S);
-  ((int8_T *)ssGetDWork(S, 9))[0] = -1;
+  ((int8_T *)ssGetDWork(S, 1))[0] = -1;
 
   /* Disable for If: '<S6>/If' */
   ssSetBlockStateForSolverChangedAtMajorStep(S);
-  ((int8_T *)ssGetDWork(S, 10))[0] = -1;
+  ((int8_T *)ssGetDWork(S, 2))[0] = -1;
 
   /* Disable for Enabled SubSystem: '<S12>/D Latch' */
-  ((boolean_T *)ssGetDWork(S, 19))[0] = false;
+  ((boolean_T *)ssGetDWork(S, 3))[0] = false;
 
   /* End of Disable for SubSystem: '<S12>/D Latch' */
 }
@@ -179,104 +179,14 @@ static void mdlStart(SimStruct *S)
 #endif
 
   {
-    uint32_T pinname;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 18))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).isInitialized = 1;
-    pinname = PA_5;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write1' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 17))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).isInitialized = 1;
-    pinname = PA_6;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write2' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 16))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).isInitialized = 1;
-    pinname = PA_7;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write3' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 15))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).isInitialized = 1;
-    pinname = PA_8;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write4' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 14))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).isInitialized = 1;
-    pinname = PA_9;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write5' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 13))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).isInitialized = 1;
-    pinname = PA_15;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write6' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 12))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).isInitialized = 1;
-    pinname = PB_9;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).isSetupComplete =
-      true;
-
-    /* Start for MATLABSystem: '<S4>/Digital Write7' */
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).
-      matlabCodegenIsDeleted = false;
-    ((boolean_T *)ssGetDWork(S, 11))[0] = true;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).isInitialized = 1;
-    pinname = PB_0;
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).MW_DIGITALIO_HANDLE =
-      MW_digitalIO_open(pinname, 1);
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).isSetupComplete =
-      true;
-
     /* Start for If: '<S5>/If' */
-    ((int8_T *)ssGetDWork(S, 9))[0] = -1;
+    ((int8_T *)ssGetDWork(S, 1))[0] = -1;
 
     /* Start for If: '<S6>/If' */
-    ((int8_T *)ssGetDWork(S, 10))[0] = -1;
+    ((int8_T *)ssGetDWork(S, 2))[0] = -1;
 
     /* Start for Enabled SubSystem: '<S12>/D Latch' */
-    ((boolean_T *)ssGetDWork(S, 19))[0] = false;
+    ((boolean_T *)ssGetDWork(S, 3))[0] = false;
     ssSetBlockStateForSolverChangedAtMajorStep(S);
 
     /* End of Start for SubSystem: '<S12>/D Latch' */
@@ -292,12 +202,12 @@ static void mdlOutputs(SimStruct *S, int_T tid)
   uint32_T tmp;
   uint16_T y;
   int8_T rtb_segment[7];
-  static const int8_T b[70] = { 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0,
+  static const int8_T c[70] = { 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0,
     0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0,
     1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0,
     0, 0 };
 
-  static const int8_T c[70] = { 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1,
+  static const int8_T b[70] = { 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1,
     1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1,
     0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1,
     1, 1 };
@@ -329,7 +239,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     if (_rtB->Switch == 1.0) {
       y_0 = (int32_T)nucleoboard_ac_co_rt_roundd_snf((real_T)y / 10.0);
       for (i = 0; i < 7; i++) {
-        rtb_segment[i] = b[10 * i + y_0];
+        rtb_segment[i] = c[10 * i + y_0];
       }
 
       rtb_select = 1.0;
@@ -340,7 +250,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
       }
 
       for (i = 0; i < 7; i++) {
-        rtb_segment[i] = c[(10 * i + (int32_T)tmp) - 1];
+        rtb_segment[i] = b[(10 * i + (int32_T)tmp) - 1];
       }
 
       rtb_select = 0.0;
@@ -353,72 +263,64 @@ static void mdlOutputs(SimStruct *S, int_T tid)
      */
     _rtB->AND1 = (rtb_segment[6] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/A' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 1))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion1'
      */
     _rtB->AND1 = (rtb_segment[5] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write1' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/B' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 2))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion2'
      */
     _rtB->AND1 = (rtb_segment[4] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write2' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/C' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 3))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion3'
      */
     _rtB->AND1 = (rtb_segment[3] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write3' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/D' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 4))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion4'
      */
     _rtB->AND1 = (rtb_segment[2] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write4' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/E' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 5))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion5'
      */
     _rtB->AND1 = (rtb_segment[1] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write5' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/F' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 6))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion6'
      */
     _rtB->AND1 = (rtb_segment[0] != 0);
 
-    /* MATLABSystem: '<S4>/Digital Write6' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/G' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 7))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
      *  DataTypeConversion: '<S10>/Data Type Conversion7'
      */
     _rtB->AND1 = (rtb_select != 0.0);
 
-    /* MATLABSystem: '<S4>/Digital Write7' */
-    MW_digitalIO_write((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).
-                       MW_DIGITALIO_HANDLE, _rtB->AND1);
+    /* Outport: '<Root>/select' */
+    ((boolean_T *)ssGetOutputPortSignal(S, 8))[0] = _rtB->AND1;
 
     /* Sum: '<S2>/Sum1' */
     _rtB->Sum1 = (real_T)*((const uint16_T **)ssGetInputPortSignalPtrs(S, 2))[0]
@@ -429,6 +331,11 @@ static void mdlOutputs(SimStruct *S, int_T tid)
      *  Product: '<S2>/Product'
      */
     _rtB->Switch = _rtB->Sum1 * (real_T)_rtP->K_p;
+
+    /* Sum: '<S2>/Sum' incorporates:
+     *  DataTypeConversion: '<S2>/Data Type Conversion1'
+     */
+    _rtB->Sum = (uint32_T)_rtB->Switch;
   }
 
   if (ssIsSampleHit(S, 1, 0)) {
@@ -450,22 +357,28 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     /* End of Product: '<S2>/Divide' */
 
     /* DiscreteIntegrator: '<S2>/Discrete-Time Integrator' */
-    _rtB->DiscreteTimeIntegrator = ((real_T *)ssGetDWork(S, 8))[0];
+    _rtB->DiscreteTimeIntegrator = ((real_T *)ssGetDWork(S, 0))[0];
 
     /* Product: '<S2>/Product1' */
     _rtB->Product1 = (real_T)_rtB->Divide * _rtB->DiscreteTimeIntegrator;
+
+    /* DataTypeConversion: '<S2>/Data Type Conversion' */
+    _rtB->DataTypeConversion = (uint32_T)_rtB->Product1;
   }
 
   if (1) {
-    /* Switch: '<S3>/Switch' incorporates:
-     *  Sum: '<S2>/Sum'
+    /* Sum: '<S2>/Sum' */
+    _rtB->Sum += _rtB->DataTypeConversion;
+
+    /* DataTypeConversion: '<S6>/Data Type Conversion' incorporates:
+     *  DataTypeConversion: '<S5>/Data Type Conversion'
      */
-    _rtB->Switch += _rtB->Product1;
+    _rtB->DataTypeConversion_o = (int32_T)_rtB->Sum;
 
     /* If: '<S5>/If' */
-    ((int8_T *)ssGetDWork(S, 9))[0] = -1;
-    if ((_rtB->Switch < 5.0) || (_rtB->Switch > -5.0)) {
-      ((int8_T *)ssGetDWork(S, 9))[0] = 0;
+    ((int8_T *)ssGetDWork(S, 1))[0] = -1;
+    if ((_rtB->DataTypeConversion_o < 5) || (_rtB->DataTypeConversion_o > -5)) {
+      ((int8_T *)ssGetDWork(S, 1))[0] = 0;
 
       /* Outputs for IfAction SubSystem: '<S5>/If Action Subsystem1' incorporates:
        *  ActionPort: '<S7>/Action Port'
@@ -482,11 +395,15 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
     /* End of If: '<S5>/If' */
 
+    /* DataTypeConversion: '<S6>/Data Type Conversion' */
+    _rtB->DataTypeConversion_o = (int32_T)floor(*((const real_T **)
+      ssGetInputPortSignalPtrs(S, 0))[0]);
+
     /* If: '<S6>/If' */
-    ((int8_T *)ssGetDWork(S, 10))[0] = -1;
-    if ((*((const real_T **)ssGetInputPortSignalPtrs(S, 0))[0] < 50.0) || (*((
-           const real_T **)ssGetInputPortSignalPtrs(S, 0))[0] > -20.0)) {
-      ((int8_T *)ssGetDWork(S, 10))[0] = 0;
+    ((int8_T *)ssGetDWork(S, 2))[0] = -1;
+    if ((_rtB->DataTypeConversion_o < 50) || (_rtB->DataTypeConversion_o > -20))
+    {
+      ((int8_T *)ssGetDWork(S, 2))[0] = 0;
 
       /* Outputs for IfAction SubSystem: '<S6>/If Action Subsystem1' incorporates:
        *  ActionPort: '<S8>/Action Port'
@@ -527,16 +444,16 @@ static void mdlOutputs(SimStruct *S, int_T tid)
      *  EnablePort: '<S13>/C'
      */
     if (_rtB->HiddenBuf_InsertedFor_DLatch_at > 0.0) {
-      if (!((boolean_T *)ssGetDWork(S, 19))[0]) {
+      if (!((boolean_T *)ssGetDWork(S, 3))[0]) {
         if (ssGetT(S) != ssGetTStart(S)) {
           ssSetBlockStateForSolverChangedAtMajorStep(S);
         }
 
-        ((boolean_T *)ssGetDWork(S, 19))[0] = true;
+        ((boolean_T *)ssGetDWork(S, 3))[0] = true;
       }
-    } else if (((boolean_T *)ssGetDWork(S, 19))[0]) {
+    } else if (((boolean_T *)ssGetDWork(S, 3))[0]) {
       ssSetBlockStateForSolverChangedAtMajorStep(S);
-      ((boolean_T *)ssGetDWork(S, 19))[0] = false;
+      ((boolean_T *)ssGetDWork(S, 3))[0] = false;
     }
 
     /* End of Outputs for SubSystem: '<S12>/D Latch' */
@@ -545,7 +462,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
   /* Outputs for Enabled SubSystem: '<S12>/D Latch' incorporates:
    *  EnablePort: '<S13>/C'
    */
-  if (((boolean_T *)ssGetDWork(S, 19))[0] && 1) {
+  if (((boolean_T *)ssGetDWork(S, 3))[0] && 1) {
     /* SignalConversion generated from: '<S13>/D' */
     _rtB->D = *((const boolean_T **)ssGetInputPortSignalPtrs(S, 1))[0];
   }
@@ -556,7 +473,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     _rtB->AND1 = (_rtB->AND && _rtB->D);
 
     /* Switch: '<S3>/Switch' */
-    if (!_rtB->AND1) {
+    if (_rtB->AND1) {
+      /* Switch: '<S3>/Switch' */
+      _rtB->Switch = _rtB->Sum;
+    } else {
       /* Switch: '<S3>/Switch' incorporates:
        *  Constant: '<S3>/Constant'
        */
@@ -583,8 +503,8 @@ static void mdlUpdate(SimStruct *S, int_T tid)
   _rtB = ((B_nucleoboard_ac_controll_softwar_T *) ssGetLocalBlockIO(S));
   if (ssIsSampleHit(S, 1, 0)) {
     /* Update for DiscreteIntegrator: '<S2>/Discrete-Time Integrator' */
-    ((real_T *)ssGetDWork(S, 8))[0] = _rtP->DiscreteTimeIntegrator_gainval *
-      _rtB->Sum1 + ((real_T *)ssGetDWork(S, 8))[0];
+    ((real_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_gainval *
+      _rtB->Sum1 + ((real_T *)ssGetDWork(S, 0))[0];
   }
 
   UNUSED_PARAMETER(tid);
@@ -593,125 +513,7 @@ static void mdlUpdate(SimStruct *S, int_T tid)
 /* Termination for root system: '<Root>' */
 static void mdlTerminate(SimStruct *S)
 {
-  /* Terminate for MATLABSystem: '<S4>/Digital Write' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 7)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
 
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write1' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 6)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write1' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write2' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 5)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write2' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write3' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 4)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write3' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write4' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 3)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write4' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write5' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 2)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write5' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write6' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 1)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write6' */
-
-  /* Terminate for MATLABSystem: '<S4>/Digital Write7' */
-  if (!(*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).
-      matlabCodegenIsDeleted) {
-    (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).
-      matlabCodegenIsDeleted = true;
-    if (((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).isInitialized ==
-         1) && (*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).
-        isSetupComplete) {
-      MW_digitalIO_close((*(mbed_DigitalWrite_nucleoboard_T *)ssGetDWork(S, 0)).
-                         MW_DIGITALIO_HANDLE);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S4>/Digital Write7' */
 #if defined(RT_MALLOC) || defined(MATLAB_MEX_FILE)
 
   if (ssGetUserData(S) != (NULL) ) {
@@ -736,7 +538,7 @@ static void mdlInitializeSizes(SimStruct *S)
   ssSetNumNonsampledZCs(S, 0);         /* Number of nonsampled ZCs */
 
   /* Number of output ports */
-  if (!ssSetNumOutputPorts(S, 1))
+  if (!ssSetNumOutputPorts(S, 9))
     return;
 
   /* outport number: 0 */
@@ -749,6 +551,94 @@ static void mdlInitializeSizes(SimStruct *S)
   ssSetOutputPortSampleTime(S, 0, 0.0);
   ssSetOutputPortOffsetTime(S, 0, 0.0);
   ssSetOutputPortOptimOpts(S, 0, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 1 */
+  if (!ssSetOutputPortMatrixDimensions(S, 1, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 1, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 1, 0.0);
+  ssSetOutputPortOffsetTime(S, 1, 0.0);
+  ssSetOutputPortOptimOpts(S, 1, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 2 */
+  if (!ssSetOutputPortMatrixDimensions(S, 2, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 2, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 2, 0.0);
+  ssSetOutputPortOffsetTime(S, 2, 0.0);
+  ssSetOutputPortOptimOpts(S, 2, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 3 */
+  if (!ssSetOutputPortMatrixDimensions(S, 3, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 3, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 3, 0.0);
+  ssSetOutputPortOffsetTime(S, 3, 0.0);
+  ssSetOutputPortOptimOpts(S, 3, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 4 */
+  if (!ssSetOutputPortMatrixDimensions(S, 4, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 4, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 4, 0.0);
+  ssSetOutputPortOffsetTime(S, 4, 0.0);
+  ssSetOutputPortOptimOpts(S, 4, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 5 */
+  if (!ssSetOutputPortMatrixDimensions(S, 5, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 5, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 5, 0.0);
+  ssSetOutputPortOffsetTime(S, 5, 0.0);
+  ssSetOutputPortOptimOpts(S, 5, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 6 */
+  if (!ssSetOutputPortMatrixDimensions(S, 6, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 6, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 6, 0.0);
+  ssSetOutputPortOffsetTime(S, 6, 0.0);
+  ssSetOutputPortOptimOpts(S, 6, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 7 */
+  if (!ssSetOutputPortMatrixDimensions(S, 7, 1, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 7, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 7, 0.0);
+  ssSetOutputPortOffsetTime(S, 7, 0.0);
+  ssSetOutputPortOptimOpts(S, 7, SS_REUSABLE_AND_LOCAL);
+
+  /* outport number: 8 */
+  if (!ssSetOutputPortVectorDimension(S, 8, 1))
+    return;
+  if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
+    ssSetOutputPortDataType(S, 8, SS_BOOLEAN);
+  }
+
+  ssSetOutputPortSampleTime(S, 8, 0.0);
+  ssSetOutputPortOffsetTime(S, 8, 0.0);
+  ssSetOutputPortOptimOpts(S, 8, SS_REUSABLE_AND_LOCAL);
 
   /* Number of input ports */
   if (!ssSetNumInputPorts(S, 3))
@@ -802,209 +692,33 @@ static void mdlInitializeSizes(SimStruct *S)
   ssSetRTWGeneratedSFcn(S, 1);         /* Generated S-function */
 
   /* DWork */
-  if (!ssSetNumDWork(S, 21)) {
+  if (!ssSetNumDWork(S, 5)) {
     return;
   }
 
-  /* '<S4>/Digital Write7': DW1 */
+  /* '<S2>/Discrete-Time Integrator': DSTATE */
   ssSetDWorkName(S, 0, "DWORK0");
   ssSetDWorkWidth(S, 0, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 0, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write6': DW1 */
-  ssSetDWorkName(S, 1, "DWORK1");
-  ssSetDWorkWidth(S, 1, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 1, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write5': DW1 */
-  ssSetDWorkName(S, 2, "DWORK2");
-  ssSetDWorkWidth(S, 2, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 2, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write4': DW1 */
-  ssSetDWorkName(S, 3, "DWORK3");
-  ssSetDWorkWidth(S, 3, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 3, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write3': DW1 */
-  ssSetDWorkName(S, 4, "DWORK4");
-  ssSetDWorkWidth(S, 4, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 4, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write2': DW1 */
-  ssSetDWorkName(S, 5, "DWORK5");
-  ssSetDWorkWidth(S, 5, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 5, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write1': DW1 */
-  ssSetDWorkName(S, 6, "DWORK6");
-  ssSetDWorkWidth(S, 6, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 6, id);
-  }
-
-#endif
-
-  /* '<S4>/Digital Write': DW1 */
-  ssSetDWorkName(S, 7, "DWORK7");
-  ssSetDWorkWidth(S, 7, 1);
-
-#if SS_SFCN_FOR_SIM
-
-  {
-    int id = ssRegisterDataType(S, "mbed_DigitalWrite_nucleoboard_T");
-    if (id == INVALID_DTYPE_ID )
-      return;
-    if (!ssSetDataTypeSize(S, id, sizeof(mbed_DigitalWrite_nucleoboard_T)))
-      return;
-    ssSetDWorkDataType(S, 7, id);
-  }
-
-#endif
-
-  /* '<S2>/Discrete-Time Integrator': DSTATE */
-  ssSetDWorkName(S, 8, "DWORK8");
-  ssSetDWorkWidth(S, 8, 1);
-  ssSetDWorkUsedAsDState(S, 8, 1);
+  ssSetDWorkUsedAsDState(S, 0, 1);
 
   /* '<S5>/If': ActiveSubsystem */
-  ssSetDWorkName(S, 9, "DWORK9");
-  ssSetDWorkWidth(S, 9, 1);
-  ssSetDWorkDataType(S, 9, SS_INT8);
+  ssSetDWorkName(S, 1, "DWORK1");
+  ssSetDWorkWidth(S, 1, 1);
+  ssSetDWorkDataType(S, 1, SS_INT8);
 
   /* '<S6>/If': ActiveSubsystem */
-  ssSetDWorkName(S, 10, "DWORK10");
-  ssSetDWorkWidth(S, 10, 1);
-  ssSetDWorkDataType(S, 10, SS_INT8);
-
-  /* '<S4>/Digital Write7': DW0 */
-  ssSetDWorkName(S, 11, "DWORK11");
-  ssSetDWorkWidth(S, 11, 1);
-  ssSetDWorkDataType(S, 11, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write6': DW0 */
-  ssSetDWorkName(S, 12, "DWORK12");
-  ssSetDWorkWidth(S, 12, 1);
-  ssSetDWorkDataType(S, 12, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write5': DW0 */
-  ssSetDWorkName(S, 13, "DWORK13");
-  ssSetDWorkWidth(S, 13, 1);
-  ssSetDWorkDataType(S, 13, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write4': DW0 */
-  ssSetDWorkName(S, 14, "DWORK14");
-  ssSetDWorkWidth(S, 14, 1);
-  ssSetDWorkDataType(S, 14, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write3': DW0 */
-  ssSetDWorkName(S, 15, "DWORK15");
-  ssSetDWorkWidth(S, 15, 1);
-  ssSetDWorkDataType(S, 15, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write2': DW0 */
-  ssSetDWorkName(S, 16, "DWORK16");
-  ssSetDWorkWidth(S, 16, 1);
-  ssSetDWorkDataType(S, 16, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write1': DW0 */
-  ssSetDWorkName(S, 17, "DWORK17");
-  ssSetDWorkWidth(S, 17, 1);
-  ssSetDWorkDataType(S, 17, SS_BOOLEAN);
-
-  /* '<S4>/Digital Write': DW0 */
-  ssSetDWorkName(S, 18, "DWORK18");
-  ssSetDWorkWidth(S, 18, 1);
-  ssSetDWorkDataType(S, 18, SS_BOOLEAN);
+  ssSetDWorkName(S, 2, "DWORK2");
+  ssSetDWorkWidth(S, 2, 1);
+  ssSetDWorkDataType(S, 2, SS_INT8);
 
   /* '<S12>/D Latch': MODE */
-  ssSetDWorkName(S, 19, "DWORK19");
-  ssSetDWorkWidth(S, 19, 1);
-  ssSetDWorkDataType(S, 19, SS_BOOLEAN);
+  ssSetDWorkName(S, 3, "DWORK3");
+  ssSetDWorkWidth(S, 3, 1);
+  ssSetDWorkDataType(S, 3, SS_BOOLEAN);
 
   /* '<S2>/Sum1': DWORK1 */
-  ssSetDWorkName(S, 20, "DWORK20");
-  ssSetDWorkWidth(S, 20, 1);
+  ssSetDWorkName(S, 4, "DWORK4");
+  ssSetDWorkWidth(S, 4, 1);
 
   /* Tunable Parameters */
   ssSetNumSFcnParams(S, 0);
@@ -1036,9 +750,7 @@ static void mdlInitializeSizes(SimStruct *S)
 #if SS_SFCN_FOR_SIM
 
   {
-    ssSupportsMultipleExecInstances(S, false);
-    ssRegisterMsgForNotSupportingMultiExecInst(S,
-      "<diag_root><diag id=\"Simulink:blocks:UserSystemObjectDoesNotSupportMultiExecInstances\" pr=\"d\"><arguments><arg type=\"encoded\">bgB1AGMAbABlAG8AYgBvAGEAcgBkAF8AYQBjAF8AYwBvAG4AdAByAG8AbABsAF8AcwBvAGYAdAB3AGEAcgAvAG4AdQBjAGwAZQBvAGIAbwBhAHIAZABfAGEAYwBfAGMAbwBuAHQAcgBvAGwAbABfAHMAbwBmAHQAdwBhAHIAZQAvAHUAcwBlAHIAXwBpAG4AdABlAHIAZgBhAGMAZQAvAEQAaQBnAGkAdABhAGwAIABXAHIAaQB0AGUAAAA=</arg><arg type=\"encoded\">PABfAF8AaQBpAFMAUwBfAF8APgA8AC8AXwBfAGkAaQBTAFMAXwBfAD4AAAA=</arg><arg type=\"encoded\">PABfAF8AaQB0AGUAcgBCAGwAawBfAF8APgA8AC8AXwBfAGkAdABlAHIAQgBsAGsAXwBfAD4AAAA=</arg><arg type=\"encoded\">bQBiAGUAZAAuAEQAaQBnAGkAdABhAGwAVwByAGkAdABlAAAA</arg></arguments><hs><h>AAAAcABUo0BL</h></hs></diag></diag_root>");
+    ssSupportsMultipleExecInstances(S, true);
     ssHasStateInsideForEachSS(S, false);
   }
 

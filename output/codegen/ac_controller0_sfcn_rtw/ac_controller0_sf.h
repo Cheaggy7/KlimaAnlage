@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.53
+ * Model version              : 1.75
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Tue Dec 17 18:11:42 2024
+ * C source code generated on : Wed Dec 18 00:21:35 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -73,7 +73,7 @@ typedef struct {
 
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
-  int32_T *Q_CH;                       /* '<Root>/Q_C//H' */
+  uint32_T *Q_CH;                      /* '<Root>/Q_C//H' */
 } ExtY_ac_controller0_T;
 
 /* Parameters (default storage) */

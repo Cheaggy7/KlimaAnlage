@@ -33,7 +33,7 @@ load_params;
 
 % Rebuild SIL
 regenerateSIL('tests/unittests/test_ac_controller', 'b2b_ac_controller', 'ac_controller', 'tests/unittests/test_ac_controller', 'ac_controller_SIL');
-regenerateSIL('tests/qualification_tests/Klimaanlage_SIL', 'qualification_test_01', 'nucleoboard_ac_controll_software', 'tests/qualification_tests/Klimaanlage_SIL', 'nucleoboard_ac_controll_software_SIL');
+regenerateSIL('tests/integration_test/Klimaanlage', 'qualification_test_01', 'nucleoboard_ac_controll_software', 'tests/qualification_tests/Klimaanlage_SIL', 'nucleoboard_ac_controll_software_SIL');
 
 
 %% local functiom

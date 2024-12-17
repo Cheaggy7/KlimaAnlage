@@ -77,7 +77,7 @@ TOOLCHAIN_NAME = [\
 #                            and do not build an executable
 
 MODEL                   = nucleoboard_ac_controll_softwar
-MODULES                 = MW_digitalIO.cpp
+MODULES                 = 
 PRODUCT                 = nucleoboard_ac_controll_softwar_sf.lib
 MAKEFILE                = nucleoboard_ac_controll_softwar.mk
 MATLAB_ROOT             = C:\Program Files\MATLAB\R2023b
@@ -115,7 +115,7 @@ MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 DEBUG_BUILD             = 0
 
 #--------------------------- Model and reference models -----------------------
-MODELLIB                  = nucleoboard_ac_controll_softwar_sf.lib
+MODELLIB                  = 
 MODELREF_LINK_LIBS        = 
 MODELREF_LINK_RSPFILE     = nucleoboard_ac_controll_softwar_ref.rsp
 COMPILER_COMMAND_FILE     = nucleoboard_ac_controll_softwar_comp.rsp
@@ -226,7 +226,7 @@ PREBUILT_OBJS_C_UPPER = $(PREBUILT_OBJS_CPP_LOWER:.C=.obj)
 PREBUILT_OBJS = $(PREBUILT_OBJS_C_UPPER:.c=.obj)
 $(PRODUCT) : $(PREBUILT_OBJS) $(OBJS) $(MODELLIB) $(LIBS) $(MODELREF_LINK_LIBS)
 	@cmd /C "echo ### Linking ..."
-	$(LD) $(LDFLAGS) $(MODELLIB) $(LIBS) $(PREBUILT_OBJS) @$(CMD_FILE) @$(MODELREF_LINK_RSPFILE) -out:$@
+
 	@cmd /C "echo $(BUILD_SUCCESS) executable $(PRODUCT)"
 !else
 !if $(STANDALONE_SUPPRESS_EXE)==1
@@ -247,8 +247,8 @@ $(PRODUCT) : $(OBJS) $(LIBS) $(MODELREF_LINK_LIBS)
 #--- Library target ---
 $(PRODUCT) : $(OBJS) 
 	@cmd /C "echo ### Linking ..."
-	$(LD) -lib /OUT:$(MODELLIB) @$(CMD_FILE)
-	@cmd /C "echo  $(BUILD_SUCCESS) static library $(MODELLIB)"
+
+
 !endif	
 
 
@@ -278,10 +278,6 @@ $(PRODUCT) : $(OBJS)
 {$(MATLAB_ROOT)\toolbox\simulink\blocks\src}.cpp.obj :
 	@cmd /C "echo ### Compiling $<"
 	$(CC) $(CPPFLAGS) $<
-
-MW_digitalIO.obj : C:\ProgramData\MATLAB\SupportPackages\R2023b\toolbox\target\supportpackages\mbed\src\MW_digitalIO.cpp
-	@cmd /C "echo ### Compiling C:\ProgramData\MATLAB\SupportPackages\R2023b\toolbox\target\supportpackages\mbed\src\MW_digitalIO.cpp
-	$(CC) $(CPPFLAGS) C:\ProgramData\MATLAB\SupportPackages\R2023b\toolbox\target\supportpackages\mbed\src\MW_digitalIO.cpp
 
 
 
@@ -317,4 +313,4 @@ set_environment_variables:
 
 #----------------------------- Dependencies -----------------------------------
 
-$(OBJS) : $(MAKEFILE) rtw_proj.tmw
+
