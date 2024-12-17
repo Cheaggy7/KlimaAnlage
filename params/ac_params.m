@@ -13,8 +13,6 @@ Q_max = 5;
 Q_min = -5;
 Temp_max = 50;
 Temp_min = -20;
-DebounceTime = 100; %ms 
-DebounceCnt = 0;
 adc_conv = (UpperUserTemp - LowerUserTemp);
 
 % general parameters
