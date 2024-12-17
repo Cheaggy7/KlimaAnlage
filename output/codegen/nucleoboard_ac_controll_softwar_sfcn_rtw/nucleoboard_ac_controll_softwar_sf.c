@@ -9,7 +9,7 @@
  *
  * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Wed Dec 18 00:22:01 2024
+ * C source code generated on : Wed Dec 18 00:44:43 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -331,11 +331,6 @@ static void mdlOutputs(SimStruct *S, int_T tid)
      *  Product: '<S2>/Product'
      */
     _rtB->Switch = _rtB->Sum1 * (real_T)_rtP->K_p;
-
-    /* Sum: '<S2>/Sum' incorporates:
-     *  DataTypeConversion: '<S2>/Data Type Conversion1'
-     */
-    _rtB->Sum = (uint32_T)_rtB->Switch;
   }
 
   if (ssIsSampleHit(S, 1, 0)) {
@@ -361,23 +356,22 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
     /* Product: '<S2>/Product1' */
     _rtB->Product1 = (real_T)_rtB->Divide * _rtB->DiscreteTimeIntegrator;
-
-    /* DataTypeConversion: '<S2>/Data Type Conversion' */
-    _rtB->DataTypeConversion = (uint32_T)_rtB->Product1;
   }
 
   if (1) {
-    /* Sum: '<S2>/Sum' */
-    _rtB->Sum += _rtB->DataTypeConversion;
+    /* Switch: '<S3>/Switch' incorporates:
+     *  Sum: '<S2>/Sum'
+     */
+    _rtB->Switch += _rtB->Product1;
 
     /* DataTypeConversion: '<S6>/Data Type Conversion' incorporates:
      *  DataTypeConversion: '<S5>/Data Type Conversion'
      */
-    _rtB->DataTypeConversion_o = (int32_T)_rtB->Sum;
+    _rtB->DataTypeConversion = (int32_T)floor(_rtB->Switch);
 
     /* If: '<S5>/If' */
     ((int8_T *)ssGetDWork(S, 1))[0] = -1;
-    if ((_rtB->DataTypeConversion_o < 5) || (_rtB->DataTypeConversion_o > -5)) {
+    if ((_rtB->DataTypeConversion < 5) || (_rtB->DataTypeConversion > -5)) {
       ((int8_T *)ssGetDWork(S, 1))[0] = 0;
 
       /* Outputs for IfAction SubSystem: '<S5>/If Action Subsystem1' incorporates:
@@ -396,13 +390,12 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     /* End of If: '<S5>/If' */
 
     /* DataTypeConversion: '<S6>/Data Type Conversion' */
-    _rtB->DataTypeConversion_o = (int32_T)floor(*((const real_T **)
+    _rtB->DataTypeConversion = (int32_T)floor(*((const real_T **)
       ssGetInputPortSignalPtrs(S, 0))[0]);
 
     /* If: '<S6>/If' */
     ((int8_T *)ssGetDWork(S, 2))[0] = -1;
-    if ((_rtB->DataTypeConversion_o < 50) || (_rtB->DataTypeConversion_o > -20))
-    {
+    if ((_rtB->DataTypeConversion < 50) || (_rtB->DataTypeConversion > -20)) {
       ((int8_T *)ssGetDWork(S, 2))[0] = 0;
 
       /* Outputs for IfAction SubSystem: '<S6>/If Action Subsystem1' incorporates:
@@ -473,10 +466,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     _rtB->AND1 = (_rtB->AND && _rtB->D);
 
     /* Switch: '<S3>/Switch' */
-    if (_rtB->AND1) {
-      /* Switch: '<S3>/Switch' */
-      _rtB->Switch = _rtB->Sum;
-    } else {
+    if (!_rtB->AND1) {
       /* Switch: '<S3>/Switch' incorporates:
        *  Constant: '<S3>/Constant'
        */

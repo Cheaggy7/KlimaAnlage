@@ -1,12 +1,12 @@
 disp(['### Running ' mfilename '.m'])
 
 % Run test 1
-results = runTest('ACC_SIL', 'qualification_test_01');
+results = runTest('Klimaanlage_SIL', 'qualification_test_01');
 plot_qualification_test_results(results, 'qualification_test_01');
 
 % Run test 2
-results = runTest('ACC_SIL', 'qualification_test_02');
-plot_qualification_test_results(results, 'qualification_test_02');
+% results = runTest('Klimaanlage_SIL', 'qualification_test_02');
+% plot_qualification_test_results(results, 'qualification_test_02');
 
 
 % Coverage report

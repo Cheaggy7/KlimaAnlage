@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.75
+ * Model version              : 1.77
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Wed Dec 18 00:21:35 2024
+ * C source code generated on : Wed Dec 18 00:44:31 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -118,17 +118,14 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
   /* Outport: '<Root>/Q_C//H' incorporates:
    *  Constant: '<S1>/Constant'
-   *  DataTypeConversion: '<S1>/Data Type Conversion'
-   *  DataTypeConversion: '<S1>/Data Type Conversion1'
    *  DiscreteIntegrator: '<S1>/Discrete-Time Integrator'
    *  Product: '<S1>/Divide'
    *  Product: '<S1>/Product'
    *  Product: '<S1>/Product1'
    *  Sum: '<S1>/Sum'
    */
-  ((uint32_T *)ssGetOutputPortSignal(S, 0))[0] = (uint32_T)((tmp * ((int16_T *)
-    ssGetDWork(S, 0))[0] * 858993459LL) >> 33) + (uint32_T)(_rtB->Sum1 *
-    _rtP->K_p);
+  ((int32_T *)ssGetOutputPortSignal(S, 0))[0] = (int32_T)((tmp * ((int16_T *)
+    ssGetDWork(S, 0))[0] * 858993459LL) >> 33) + _rtB->Sum1 * _rtP->K_p;
   UNUSED_PARAMETER(tid);
 }
 
@@ -181,7 +178,7 @@ static void mdlInitializeSizes(SimStruct *S)
   if (!ssSetOutputPortVectorDimension(S, 0, 1))
     return;
   if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
-    ssSetOutputPortDataType(S, 0, SS_UINT32);
+    ssSetOutputPortDataType(S, 0, SS_INT32);
   }
 
   ssSetOutputPortSampleTime(S, 0, 0.1);
@@ -225,7 +222,7 @@ static void mdlInitializeSizes(SimStruct *S)
   ssSetRTWGeneratedSFcn(S, 1);         /* Generated S-function */
 
   /* DWork */
-  if (!ssSetNumDWork(S, 1)) {
+  if (!ssSetNumDWork(S, 2)) {
     return;
   }
 
@@ -234,6 +231,11 @@ static void mdlInitializeSizes(SimStruct *S)
   ssSetDWorkWidth(S, 0, 1);
   ssSetDWorkDataType(S, 0, SS_INT16);
   ssSetDWorkUsedAsDState(S, 0, 1);
+
+  /* '<S1>/Sum': DWORK1 */
+  ssSetDWorkName(S, 1, "DWORK1");
+  ssSetDWorkWidth(S, 1, 1);
+  ssSetDWorkDataType(S, 1, SS_INT32);
 
   /* Tunable Parameters */
   ssSetNumSFcnParams(S, 0);

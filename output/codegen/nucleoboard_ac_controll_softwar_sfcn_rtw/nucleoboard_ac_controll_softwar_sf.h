@@ -9,7 +9,7 @@
  *
  * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Wed Dec 18 00:22:01 2024
+ * C source code generated on : Wed Dec 18 00:44:43 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -66,16 +66,14 @@ typedef struct {
 /* Block signals (default storage) */
 typedef struct {
   real_T Sum1;                         /* '<S2>/Sum1' */
+  real_T Product1;                     /* '<S2>/Product1' */
   real_T SignalGenerator;              /* '<S11>/Signal Generator' */
   real_T HiddenBuf_InsertedFor_DLatch_at;
   real_T In1;                          /* '<S8>/In1' */
   real_T In1_p;                        /* '<S7>/In1' */
   real_T DiscreteTimeIntegrator;       /* '<S2>/Discrete-Time Integrator' */
-  real_T Product1;                     /* '<S2>/Product1' */
   real_T Switch;                       /* '<S3>/Switch' */
-  uint32_T DataTypeConversion;         /* '<S2>/Data Type Conversion' */
-  uint32_T Sum;                        /* '<S2>/Sum' */
-  int32_T DataTypeConversion_o;        /* '<S6>/Data Type Conversion' */
+  int32_T DataTypeConversion;          /* '<S6>/Data Type Conversion' */
   uint16_T Divide;                     /* '<S2>/Divide' */
   boolean_T AND;                       /* '<S3>/AND' */
   boolean_T D;                         /* '<S13>/D' */
