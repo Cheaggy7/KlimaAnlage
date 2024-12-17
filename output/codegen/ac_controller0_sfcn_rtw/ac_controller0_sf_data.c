@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.12
+ * Model version              : 1.20
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Sun Dec 15 19:54:36 2024
+ * C source code generated on : Tue Dec 17 00:58:22 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

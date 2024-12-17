@@ -25,11 +25,12 @@ ax(idx) = subplot(Nrows, Ncols, idx); idx=idx+1; hold on
 plot(testoutput.power_cool_heat_SIL)
 title('power\_cool\_heat\_SIL')
 
+testoutput_power_cool_heat = int64(testoutput.power_cool_heat.Data);
+testoutput_power_cool_heat_SIL = int64(testoutput.power_cool_heat_SIL.Data);
+
 % Automatic checks
 checks_passed = [];
-%checks_passed(1) = max(abs(testoutput.power_cool_heat.Data(:,1) - testoutput.power_cool_heat.Data(:,2))) < 1e-9;
-%checks_passed(2) = max(abs(testoutput.power_cool_heat_SIL.Data(:,1) - testoutput.power_cool_heat_SIL.Data(:,2))) < 1e-9;
-checks_passed(1) = max(abs(testoutput.power_cool_heat.Data(:,1) - testoutput.power_cool_heat_SIL.Data(:,1))) < 1e-9;
+checks_passed(1) = max(abs(testoutput_power_cool_heat(:,1) - testoutput_power_cool_heat_SIL(:,1))) < 1e-9;
 
 if all(checks_passed)
     testresult_string = 'TESTRESULT: OK';

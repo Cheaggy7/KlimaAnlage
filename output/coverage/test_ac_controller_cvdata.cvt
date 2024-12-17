@@ -24,20 +24,20 @@ CV_Database {
   testdata {
     id			    3
     modelcov		    1
-    uniqueId		    "c84bae19-37e3-4bcf-89e5-c471fb54f167"
+    uniqueId		    "6766e1a2-ff3e-4ca6-a93d-4775274e437c"
     linkNode		    [2 0 0]
     type		    DLGENABLED_TST
     settings		    [1 1 0 1 0 0 0]
-    modelVersion	    "1.12"
+    modelVersion	    "1.21"
     creator		    "kilia"
-    lastModifiedDate	    "Sun Dec 15 19:52:51 2024"
+    lastModifiedDate	    "Tue Dec 17 00:58:30 2024"
     blockReductionStatus    "forcedOff"
     defaultParameterBehavior "Tunable"
     dbVersion		    "(R2023b)"
     dbversionToRestore	    "(R2023b)"
     conditionallyExecuteInputs 1
-    startTime		    739601.828404919
-    stopTime		    739601.8284101968
+    startTime		    739603.0406787616
+    stopTime		    739603.0406810995
     simStopTime		    10
     testobjectives	    [0 0 0 0 0 0 0 0 0 0 0 0 0 4]
     mcdcMode		    1
