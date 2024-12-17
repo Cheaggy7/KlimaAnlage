@@ -29,7 +29,7 @@ testoutput_power_cool_heat = int64(testoutput.power_cool_heat.Data);
 
 % Automatic checks
 checks_passed = [];
-checks_passed(1) = testoutput_power_cool_heat(10,1) == 0;                                   % Wenn die eingestellte Innentemperatur gleich der Außentemperatur ist, dann soll keine Kühl- oder Heizleistung abfallen
+checks_passed(1) = testoutput_power_cool_heat(10,1) == 0;
 checks_passed(2) = testoutput_power_cool_heat(30,1) > testoutput_power_cool_heat(60,1);     % In der Kühlphase muss die Heiz- / Kühlleistung geringer sein als in der Wärmphase 
 checks_passed(3) = testoutput_power_cool_heat(30,1) > 0;                                    % Regler muss positiven Wert geben in der Heizphase (draußen kälter als drinnen)
 checks_passed(4) = testoutput_power_cool_heat(60,1) < 0;                                    % Regler muss negativen Wert geben in der Kühlphase (draußen ist es wärmer als drinnen)

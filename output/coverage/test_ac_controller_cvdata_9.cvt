@@ -24,7 +24,7 @@ CV_Database {
   testdata {
     id			    3
     modelcov		    1
-    uniqueId		    "43103fd0-6e49-4661-86a5-2c8eb5457d77"
+    uniqueId		    "1eadfe18-7744-4f0a-8f9b-e14eacd33a8f"
     linkNode		    [2 0 4]
     type		    DLGENABLED_TST
     settings		    [1 1 0 1 0 0 0]
@@ -36,8 +36,8 @@ CV_Database {
     dbVersion		    "(R2023b)"
     dbversionToRestore	    "(R2023b)"
     conditionallyExecuteInputs 1
-    startTime		    739603.5030427894
-    stopTime		    739603.503043588
+    startTime		    739603.5169697338
+    stopTime		    739603.5169701736
     simStopTime		    10
     testobjectives	    [0 0 0 0 0 0 0 0 0 0 0 0 0 5]
     mcdcMode		    1
@@ -52,8 +52,11 @@ CV_Database {
     id			    4
     modelcov		    1
     analyzedModel	    "test_ac_controller"
-    uniqueId		    "5add0367-31ab-4b1d-8607-432c2223920c"
-    aggregatedIds	    "43103fd0-6e49-4661-86a5-2c8eb5457d77,70f826af-81af-4c7c-b144-33e246fa0824"
+    uniqueId		    "11f33eba-bc88-4bdc-b24f-e1a4d439da84"
+    aggregatedIds	    "1eadfe18-7744-4f0a-8f9b-e14eacd33a8f,31ffb48f-1ca8-4b91-85a9-7f2251ae6973,66df396e-fd4c-42c5-b0"
+    "ea-e12495d3c07b,dc7bcee1-f291-4cb7-bdab-825a094de618,b3416738-6532-4c9e-943b-2c4202889bb7,e378d3df-1532-43ab-a1f4-"
+    "02ffabd2683e,38de21ec-2b9b-4e1e-b631-68f4b63c52a4,77d4a851-7a97-4c28-bad6-fb16be6a10d9,43103fd0-6e49-4661-86a5-2c8"
+    "eb5457d77,70f826af-81af-4c7c-b144-33e246fa0824"
     linkNode		    [2 3 0]
     settings		    [1 1 0 1 0 0 0]
     modelVersion	    "1.40"
@@ -65,7 +68,7 @@ CV_Database {
     dbversionToRestore	    "(R2023b)"
     conditionallyExecuteInputs 1
     startTime		    739603.5030188425
-    stopTime		    739603.503043588
+    stopTime		    739603.5169701736
     data {
       sfcnCovData	      "100 T\"AAFJTQAAAAAOAAAAmAAAAAYAAAAIAAAAEQAAAAAAAAABAAAAAAAAAAEABABNQ09TAQAAAB4AAABTbENvdi5yZX"
       "N1bHRzLkNvZGVDb3ZEYXRhR3JvdXAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABgAAAAEAAAABAAAAAAAAAAYAAAAYAAAAAAAA3Q"
@@ -134,8 +137,8 @@ CV_Database {
     metricenumValue	    14
     metricName		    "cvmetric_Structural_block"
     data {
-      rawdata		      "100 M51x1[9 0 8 0 1 0 1 0 202 1 0 1 0 2 1 0 1 0 202 1 0 1 0 202 1 0 1 0 202 1 0 1 0 202 1 0 1 0 "
-      "2 1 0 1 0 2 1 0 1 0 1 0 202]"
+      rawdata		      "100 M51x1[9 0 8 0 1 0 1 0 1010 1 0 1 0 10 1 0 1 0 1010 1 0 1 0 1010 1 0 1 0 1010 1 0 1 0 1010 1 "
+      "0 1 0 10 1 0 1 0 10 1 0 1 0 1 0 1010]"
     }
   }
   typename {

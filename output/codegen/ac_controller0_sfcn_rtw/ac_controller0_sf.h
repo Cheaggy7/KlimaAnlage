@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.20
+ * Model version              : 1.39
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Tue Dec 17 00:58:22 2024
+ * C source code generated on : Tue Dec 17 12:04:03 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -62,18 +62,18 @@ typedef struct {
 
 /* Block signals (default storage) */
 typedef struct {
-  uint16_T Sum1;                       /* '<S1>/Sum1' */
+  int16_T Sum1;                        /* '<S1>/Sum1' */
 } B_ac_controller0_T;
 
 /* External inputs (root inport signals with default storage) */
 typedef struct {
-  uint16_T *current_temperature;       /* '<Root>/current_temperature' */
-  uint16_T *sampled_target_temperature;/* '<Root>/sampled_target_temperature' */
+  int16_T *current_temperature;        /* '<Root>/current_temperature' */
+  int16_T *sampled_target_temperature; /* '<Root>/sampled_target_temperature' */
 } ExternalUPtrs_ac_controller0_T;
 
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
-  uint32_T *Q_CH;                      /* '<Root>/Q_C//H' */
+  int32_T *Q_CH;                       /* '<Root>/Q_C//H' */
 } ExtY_ac_controller0_T;
 
 /* Parameters (default storage) */
@@ -84,7 +84,7 @@ struct P_ac_controller0_T_ {
   uint16_T T_n;                        /* Variable: T_n
                                         * Referenced by: '<S1>/Constant1'
                                         */
-  uint16_T DiscreteTimeIntegrator_IC;
+  int16_T DiscreteTimeIntegrator_IC;
                                 /* Computed Parameter: DiscreteTimeIntegrator_IC
                                  * Referenced by: '<S1>/Discrete-Time Integrator'
                                  */

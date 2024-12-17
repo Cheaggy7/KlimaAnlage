@@ -7,9 +7,9 @@
  *
  * Code generation for model "ac_controller0_sf".
  *
- * Model version              : 1.20
+ * Model version              : 1.39
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Tue Dec 17 00:58:22 2024
+ * C source code generated on : Tue Dec 17 12:04:03 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -56,13 +56,13 @@ static void mdlInitializeConditions(SimStruct *S)
     _rtP = ((P_ac_controller0_T *) ssGetLocalDefaultParam(S));
 
     /* InitializeConditions for DiscreteIntegrator: '<S1>/Discrete-Time Integrator' */
-    ((uint16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
+    ((int16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
   } else {
     P_ac_controller0_T *_rtP;
     _rtP = ((P_ac_controller0_T *) ssGetLocalDefaultParam(S));
 
     /* InitializeConditions for DiscreteIntegrator: '<S1>/Discrete-Time Integrator' */
-    ((uint16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
+    ((int16_T *)ssGetDWork(S, 0))[0] = _rtP->DiscreteTimeIntegrator_IC;
   }
 }
 
@@ -101,8 +101,8 @@ static void mdlOutputs(SimStruct *S, int_T tid)
   _rtB = ((B_ac_controller0_T *) ssGetLocalBlockIO(S));
 
   /* Sum: '<S1>/Sum1' */
-  _rtB->Sum1 = (uint16_T)(*((const uint16_T **)ssGetInputPortSignalPtrs(S, 1))[0]
-    - *((const uint16_T **)ssGetInputPortSignalPtrs(S, 0))[0]);
+  _rtB->Sum1 = (int16_T)(*((const int16_T **)ssGetInputPortSignalPtrs(S, 1))[0]
+    - *((const int16_T **)ssGetInputPortSignalPtrs(S, 0))[0]);
 
   /* Product: '<S1>/Divide' incorporates:
    *  Constant: '<S1>/Constant'
@@ -124,9 +124,8 @@ static void mdlOutputs(SimStruct *S, int_T tid)
    *  Product: '<S1>/Product1'
    *  Sum: '<S1>/Sum'
    */
-  ((uint32_T *)ssGetOutputPortSignal(S, 0))[0] = (uint32_T)(((uint32_T)tmp *
-    ((uint16_T *)ssGetDWork(S, 0))[0] * 3435973837ULL) >> 35) + (uint32_T)
-    _rtB->Sum1 * _rtP->K_p;
+  ((int32_T *)ssGetOutputPortSignal(S, 0))[0] = (int32_T)((tmp * ((int16_T *)
+    ssGetDWork(S, 0))[0] * 858993459LL) >> 33) + _rtB->Sum1 * _rtP->K_p;
   UNUSED_PARAMETER(tid);
 }
 
@@ -139,8 +138,8 @@ static void mdlUpdate(SimStruct *S, int_T tid)
   _rtB = ((B_ac_controller0_T *) ssGetLocalBlockIO(S));
 
   /* Update for DiscreteIntegrator: '<S1>/Discrete-Time Integrator' */
-  ((uint16_T *)ssGetDWork(S, 0))[0] = (uint16_T)((uint32_T)((uint16_T *)
-    ssGetDWork(S, 0))[0] + _rtB->Sum1);
+  ((int16_T *)ssGetDWork(S, 0))[0] = (int16_T)(((int16_T *)ssGetDWork(S, 0))[0]
+    + _rtB->Sum1);
   UNUSED_PARAMETER(tid);
 }
 
@@ -179,7 +178,7 @@ static void mdlInitializeSizes(SimStruct *S)
   if (!ssSetOutputPortVectorDimension(S, 0, 1))
     return;
   if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
-    ssSetOutputPortDataType(S, 0, SS_UINT32);
+    ssSetOutputPortDataType(S, 0, SS_INT32);
   }
 
   ssSetOutputPortSampleTime(S, 0, 0.1);
@@ -195,7 +194,7 @@ static void mdlInitializeSizes(SimStruct *S)
     if (!ssSetInputPortVectorDimension(S, 0, 1))
       return;
     if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
-      ssSetInputPortDataType(S, 0, SS_UINT16);
+      ssSetInputPortDataType(S, 0, SS_INT16);
     }
 
     ssSetInputPortDirectFeedThrough(S, 0, 1);
@@ -210,7 +209,7 @@ static void mdlInitializeSizes(SimStruct *S)
     if (!ssSetInputPortVectorDimension(S, 1, 1))
       return;
     if (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) {
-      ssSetInputPortDataType(S, 1, SS_UINT16);
+      ssSetInputPortDataType(S, 1, SS_INT16);
     }
 
     ssSetInputPortDirectFeedThrough(S, 1, 1);
@@ -230,13 +229,13 @@ static void mdlInitializeSizes(SimStruct *S)
   /* '<S1>/Discrete-Time Integrator': DSTATE */
   ssSetDWorkName(S, 0, "DWORK0");
   ssSetDWorkWidth(S, 0, 1);
-  ssSetDWorkDataType(S, 0, SS_UINT16);
+  ssSetDWorkDataType(S, 0, SS_INT16);
   ssSetDWorkUsedAsDState(S, 0, 1);
 
   /* '<S1>/Sum': DWORK1 */
   ssSetDWorkName(S, 1, "DWORK1");
   ssSetDWorkWidth(S, 1, 1);
-  ssSetDWorkDataType(S, 1, SS_UINT32);
+  ssSetDWorkDataType(S, 1, SS_INT32);
 
   /* Tunable Parameters */
   ssSetNumSFcnParams(S, 0);
