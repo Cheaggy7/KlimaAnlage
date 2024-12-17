@@ -1,0 +1,3882 @@
+CV_Database {
+  modelcov {
+    id			    1
+    name		    "Klimaanlage@(R2023b)"
+    unmangledName	    "Klimaanlage"
+    dbVersion		    "(R2023b)"
+    canHarnessMapBackToOwner 1
+    refModelcovIds	    [1]
+    topModelcovId	    [1]
+    rootTree		    [0 2 0 0]
+    blockTypes		    [7 8 9 10 11 12 13 14]
+  }
+  root {
+    id			    2
+    modelcov		    1
+    topSlsf		    15
+    firstTest		    3
+    treeNode		    [1 0 0 0]
+    checksum		    [2224066390 1465009248 1217026135 1966868604]
+    structuralChecksum	    [2257245496 4200841026 3571244163 1407228883]
+    metricChecksum	    [0 0 0 0 3534896064 2154028624 2844338046 3590589677 3181954895 812242703 2989829028 1563119599]
+    dataSize		    [55 58 0 46 92 0 0]
+    runningTotal	    4
+  }
+  testdata {
+    id			    3
+    modelcov		    1
+    uniqueId		    "6b8994d4-fd42-4248-82d3-3f673c8837a1"
+    linkNode		    [2 0 4]
+    type		    DLGENABLED_TST
+    settings		    [1 1 0 1 0 0 0]
+    modelVersion	    "1.46"
+    creator		    "kilia"
+    lastModifiedDate	    "Tue Dec 17 16:48:36 2024"
+    blockReductionStatus    "forcedOff"
+    defaultParameterBehavior "Tunable"
+    dbVersion		    "(R2023b)"
+    dbversionToRestore	    "(R2023b)"
+    conditionallyExecuteInputs 1
+    startTime		    739603.7116000811
+    stopTime		    739603.7116758218
+    simStopTime		    100
+    data {
+      decision		      "100 M55x1[9 0 9 0 4 0 1 0 1 0 1 0 0 18001 1 0 1 0 1 0 0 18001 2 0 2 0 10806 43195 5 0 2 0 2 0 2"
+      " 0 2 0 2 0 12001 6000 3 0 3 0 3 0 3 0 3 0 54001 27001 27000]"
+      condition		      "100 M58x1[13 0 13 0 11 0 3 0 3 0 3 0 7795 10206 0 7795 3 0 3 0 3 0 17950 51 0 17950 2 0 2 0 0 "
+      "18001 0 18001 3 0 3 0 0 18001 3602 14399 2 0 2 0 2 0 2 0 2 0 2 0 2 0 1200 4800]"
+      mcdc		      "100 M46x1[1 0 1 0 1 0 0 0 0 0 0 0 3 3 2 1 0 0 0 0 0 0 0 0 0 3 3 2 1 0 0 0 1 0 1 0 3 3 7 7 7 7 3 5 6"
+      " 0]"
+    }
+    testobjectives	    [0 0 0 0 0 0 0 0 0 0 0 0 0 5]
+    mcdcMode		    1
+    mldref_enable	    "on"
+    covExternalEMLEnable    1
+    forceBlockReductionOff  1
+    covBoundaryRelTol	    0.01
+    covBoundaryAbsTol	    1e-05
+    covSFcnEnable	    1
+  }
+  testdata {
+    id			    4
+    modelcov		    1
+    analyzedModel	    "Klimaanlage"
+    uniqueId		    "bd8ccc02-2725-4387-8980-16beabd2151f"
+    aggregatedIds	    "6b8994d4-fd42-4248-82d3-3f673c8837a1,b679e17e-b97e-4ffa-8ef0-e289cafe3d5a,c0b789d2-23e2-4cae-90"
+    "5a-c4d0c18bc22a"
+    linkNode		    [2 3 0]
+    settings		    [1 1 0 1 0 0 0]
+    modelVersion	    "1.46"
+    creator		    "kilia"
+    lastModifiedDate	    "Tue Dec 17 16:48:36 2024"
+    blockReductionStatus    "forcedOff"
+    defaultParameterBehavior "Tunable"
+    dbVersion		    "(R2023b)"
+    dbversionToRestore	    "(R2023b)"
+    conditionallyExecuteInputs 1
+    startTime		    739603.7004712847
+    stopTime		    739603.7116758218
+    data {
+      decision		      "100 M55x1[9 0 9 0 4 0 1 0 1 0 1 0 0 54003 1 0 1 0 1 0 0 54003 2 0 2 0 10818 151185 5 0 2 0 2 0 "
+      "2 0 2 0 2 0 36003 18000 3 0 3 0 3 0 3 0 3 0 162003 81003 81000]"
+      condition		      "100 M58x1[13 0 13 0 11 0 3 0 3 0 3 0 34647 19356 0 34647 3 0 3 0 3 0 53850 153 0 53850 2 0 2 0"
+      " 0 54003 0 54003 3 0 3 0 0 54003 3606 50397 2 0 2 0 2 0 2 0 2 0 2 0 2 0 1200 16800]"
+      mcdc		      "100 M46x1[1 0 1 0 1 0 0 0 0 0 0 0 3 3 2 1 0 0 0 0 0 0 0 0 0 3 3 2 1 0 0 0 1 0 1 0 3 3 7 7 7 7 3 5 6"
+      " 0]"
+      sfcnCovData	      "100 T\"AAFJTQAAAAAOAAAAmAAAAAYAAAAIAAAAEQAAAAAAAAABAAAAAAAAAAEABABNQ09TAQAAAB4AAABTbENvdi5yZX"
+      "N1bHRzLkNvZGVDb3ZEYXRhR3JvdXAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABgAAAAEAAAABAAAAAAAAAAYAAAAYAAAAAAAA3Q"
+      "IAAAABAAAAAQAAAAEAAAAFAAAADgAAAMgNAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAmA0AAAEAAAAAAAAAAgAAAJgNAAAAAUlNAAAAAA"
+      "4AAAD4DAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAFAAAAAQAAAAUAAABNQ09TAAAAAA4AAACwDAAABgAAAA"
+      "gAAAARAAAAAAAAAAEAAAAAAAAAAQAEAE1DT1MBAAAADQAAAEZpbGVXcmFwcGVyX18AAAAOAAAAcAwAAAYAAAAIAAAAAQAAAAAAAAAFAAAACAAAAA"
+      "0AAAABAAAAAQAAAAAAAAAOAAAAoAIAAAYAAAAIAAAACQAAAAAAAAAFAAAACAAAAHACAAABAAAAAQAAAAAAAAACAAAAcAIAAAQAAAAQAAAA4AAAAE"
+      "ABAABAAQAAuAEAAEACAABoAgAAaAIAAHACAABEYXRhAHNlcmlhbGl6YXRpb24ATWFwAGNvbnRhaW5lcnMARmlsdGVyZWRJbnN0YW5jZXMASW1wbA"
+      "BOYW1lAERlc2NyaXB0aW9uAE1DRENNb2RlAGludGVybmFsLmNvZGVjb3YAaW50MzIuRGF0YQBpbnQzMgBVTktOT1dOAEtlZXBMb2NhbFRlc3RJbm"
+      "ZvUmVmcwBDb2RlQ292RGF0YUdyb3VwAFNsQ292LnJlc3VsdHMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAAAAAAAKAAAACQAAAA"
+      "AAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAAAAAAAQAAAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAA"
+      "AAAAAAAAAAAAAAAAEAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAAIAAAABAAAABAAAAAAAAAAAAAAAAAAAAAMAAAADAAAAAgAAAAAAAAAAAAAAAAAAAA"
+      "QAAAACAAAAAAAAAAAAAAADAAAAAQAAAAEAAAABAAAABQAAAAEAAAACAAAABgAAAAEAAAAHAAAAAQAAAAIAAAABAAAAAAAAAAQAAAAHAAAAAQAAAA"
+      "MAAAAIAAAAAQAAAAQAAAAJAAAAAQAAAAYAAAAOAAAAAgAAAAAAAAAAAAAAAQAAAAsAAAABAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAADgAAAHgBAAAGAAAACAAAAAIAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAABQAEAA"
+      "sAAAABAAAANwAAAGtleXMAAAAAAAAAdmFsdWVzAAAAAAB1bmlmb3JtaXR5AGtleVR5cGUAAAAAdmFsdWVUeXBlAAAADgAAACgAAAAGAAAACAAAAA"
+      "EAAAAAAAAABQAAAAgAAAABAAAAAAAAAAEAAAAAAAAADgAAACgAAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAABAAAAAAAAAAEAAAAAAAAADgAAAD"
+      "AAAAAGAAAACAAAAAkCAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAAAgABAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAA"
+      "EAAAAEAAAAAQAAAAAAAAAQAAQAY2hhcg4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAMAAAABAAAAAAAAABAAAwBhbnkADgAAAE"
+      "gAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAGAAAAAQAAAAEAAAAAAAAABgAAABgAAAAAAADdAgAAAAEAAAABAAAAAgAAAAEAAAAOAAAAKAAAAA"
+      "YAAAAIAAAAAQAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAA"
+      "AAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADAAAAAGAAAACAAAAA"
+      "wAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAABQAEAAAAAAAOAAAAYAIAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAA"
+      "AAAAAFAAQAFwAAAAEAAACKAAAARW51bWVyYXRpb25JbnN0YW5jZVRhZwBDbGFzc05hbWUAAAAAAAAAAAAAAAAAAFZhbHVlTmFtZXMAAAAAAAAAAA"
+      "AAAAAAVmFsdWVzAAAAAAAAAAAAAAAAAAAAAABWYWx1ZUluZGljZXMAAAAAAAAAAAAAAEJ1aWx0aW5DbGFzc05hbWUAAAAAAAAAAAAAAAAADgAAAD"
+      "AAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAABgAEAAAAAN0OAAAAMAAAAAYAAAAIAAAADQAAAAAAAAAFAAAACAAAAA"
+      "EAAAABAAAAAQAAAAAAAAAGAAQAAgAAAA4AAAAwAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAYABAANAAAADgAAAH"
+      "gAAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAGAAAAAQAAAA"
+      "EAAAAAAAAABgAAABgAAAAAAADdAgAAAAEAAAABAAAABAAAAAIAAAAOAAAAMAAAAAYAAAAIAAAADQAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAA"
+      "AAAAAGAAQAAAAAAA4AAAAwAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAYABAADAAAADgAAAEgAAAAGAAAACAAAAA"
+      "0AAAAAAAAABQAAAAgAAAAGAAAAAQAAAAEAAAAAAAAABgAAABgAAAAAAADdAgAAAAEAAAABAAAAAwAAAAQAAAAOAAAAqAEAAAYAAAAIAAAAAQAAAA"
+      "AAAAAFAAAACAAAAAYAAAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAA"
+      "EAAAAAAAAADgAAADgAAAAGAAAACAAAAAIAAAAAAAAABQAAAAgAAAABAAAAAAAAAAEAAAAAAAAABQAEAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAA"
+      "gAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAA"
+      "EAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAIAAAAAAAAABQAAAAgAAAABAAAAAAAAAAEAAAAAAAAABQAEAA"
+      "EAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAASAAAAA"
+      "YAAAAIAAAADAAAAAAAAAAFAAAACAAAAAYAAAABAAAAAQAAAAAAAAAFAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAwAgAABgAAAA"
+      "gAAAABAAAAAAAAAAUAAAAIAAAABgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAA"
+      "UABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAI"
+      "AAAAAGAAAACAAAAAIAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAABQAEAAsAAAABAAAACwAAAGludDMyLkRhdGEAAAAAAAAOAAAAMAAAAA"
+      "YAAAAIAAAADAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAFAAAAAAAAAA4AAAB4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAA"
+      "EAAAABAAAAAAAAAAUABAAFAAAAAQAAAAUAAABEYXRhAAAAAA4AAAAwAAAABgAAAAgAAAAMAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAAA"
+      "UAAAAAAAAADgAAADgAAAAGAAAACAAAAAIAAAAAAAAABQAAAAgAAAABAAAAAAAAAAEAAAAAAAAABQAEAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAA"
+      "gAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAiAAAAAYAAAAIAAAACQAAAAAAAAAFAAAACAAAAA"
+      "EAAABYAAAAAQAAAAAAAAACAAAAWAAAAAABSU0AAAAADgAAAEgAAAAGAAAACAAAAAIAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAABQAEAA"
+      "UAAAABAAAABQAAAE1DT1MAAAAADgAAAAAAAAA=\""
+    }
+    testRunInfo		    "100 S'runId','runName','testId'{{M[0],T\"\",M[]}}"
+    testobjectives	    [0 0 0 0 0 0 0 0 0 0 0 0 0 6]
+    mcdcMode		    1
+    isDerived		    1
+    covSFcnEnable	    1
+  }
+  metricdata {
+    id			    5
+    metricenumValue	    14
+    metricName		    "cvmetric_Structural_block"
+    size		    268
+    data {
+      rawdata		      "100 M268x1[48 0 38 0 8 0 1 0 1 0 18001 1 0 1 0 1 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1"
+      " 0 18001 1 0 1 0 1 1 0 1 0 1 8 0 2 0 1 0 1 0 18001 1 0 1 0 1 2 0 1 0 1 0 18001 1 0 1 0 1 1 0 1 0 18001 1 0 1 0 1"
+      "8001 1 0 1 0 18001 1 0 1 0 1 22 0 5 0 3 0 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 1 2 0 1 0 1 0 1 0 1 0 6000 1 0 1 0"
+      " 18001 9 0 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0"
+      " 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0"
+      " 1 0 18001 1 0 1 0 18001 7 0 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 18001 1 0 1 0 1 1 0 1 0 18001 1 0"
+      " 1 0 1 1 0 1 0 18001 1 0 1 0 1 1 0 1 0 1]"
+    }
+  }
+  metricdata {
+    id			    6
+    metricenumValue	    14
+    metricName		    "cvmetric_Structural_block"
+    data {
+      rawdata		      "100 M268x1[48 0 38 0 8 0 1 0 1 0 54003 1 0 1 0 3 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1"
+      " 0 54003 1 0 1 0 3 1 0 1 0 3 8 0 2 0 1 0 1 0 54003 1 0 1 0 3 2 0 1 0 1 0 54003 1 0 1 0 3 1 0 1 0 54003 1 0 1 0 5"
+      "4003 1 0 1 0 54003 1 0 1 0 3 22 0 5 0 3 0 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 3 2 0 1 0 1 0 1 0 1 0 18000 1 0 1 "
+      "0 54003 9 0 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 "
+      "0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 "
+      "0 1 0 54003 1 0 1 0 54003 7 0 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 54003 1 0 1 0 3 1 0 1 0 54003 1 "
+      "0 1 0 3 1 0 1 0 54003 1 0 1 0 3 1 0 1 0 3]"
+    }
+  }
+  typename {
+    id			    7
+    type		    "Product"
+  }
+  typename {
+    id			    8
+    type		    "Sum"
+  }
+  typename {
+    id			    9
+    type		    "DiscreteIntegrator"
+  }
+  typename {
+    id			    10
+    type		    "Logic"
+  }
+  typename {
+    id			    11
+    type		    "Switch"
+  }
+  typename {
+    id			    12
+    type		    "If"
+  }
+  typename {
+    id			    13
+    type		    "DataTypeConversion"
+  }
+  typename {
+    id			    14
+    type		    "Gain"
+  }
+  slsfobj {
+    id			    15
+    name		    "Klimaanlage"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [0 16 0 0]
+    metricFlags		    28763
+    metrics		    [90 91 92 93 94 95 96 97]
+    cvChecksum {
+      u1		      2224066390
+      u2		      1465009248
+      u3		      1217026135
+      u4		      1966868604
+    }
+    cvStructuralChecksum    [2257245496 4200841026 3571244163 1407228883]
+    cvMetricChecksum	    [3534896064 2154028624 2844338046 3590589677 3181954895 812242703 2989829028 1563119599]
+  }
+  slsfobj {
+    id			    16
+    name		    "nucleoboard_ac_controll_software"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [15 17 0 79]
+    metricFlags		    28763
+    metrics		    [98 99 100 101 102 103 104 105]
+    cvChecksum {
+      u1		      312195221
+      u2		      3997787828
+      u3		      2052831092
+      u4		      3426292097
+    }
+    cvStructuralChecksum    [3070176500 3366729668 1634707590 2379283466]
+    cvMetricChecksum	    [1099691679 1045277279 3151015175 1559062059 2832440891 1154349574 1847664696 648957422]
+  }
+  slsfobj {
+    id			    17
+    name		    "ac_controller"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [16 18 0 26]
+    metricFlags		    16400
+    metrics		    [106 107]
+    cvChecksum {
+      u1		      189483834
+      u2		      3538054366
+      u3		      4101694163
+      u4		      2965410273
+    }
+    cvStructuralChecksum    [189483834 3538054366 4101694163 2965410273]
+  }
+  slsfobj {
+    id			    18
+    name		    "Discrete-Time\nIntegrator"
+    origin		    SIMULINK_OBJ
+    slBlckType		    9
+    modelcov		    1
+    treeNode		    [17 0 0 19]
+    metricFlags		    16400
+    metrics		    [108 109]
+    cvChecksum {
+      u1		      3885695167
+      u2		      1370432672
+      u3		      4252108665
+      u4		      2097094040
+    }
+    cvStructuralChecksum    [3885695167 1370432672 4252108665 2097094040]
+  }
+  slsfobj {
+    id			    19
+    name		    "Divide"
+    origin		    SIMULINK_OBJ
+    slBlckType		    7
+    modelcov		    1
+    treeNode		    [17 0 18 20]
+    metricFlags		    16400
+    metrics		    [112 113]
+    cvChecksum {
+      u1		      609237503
+      u2		      1465451592
+      u3		      3957197708
+      u4		      1164069700
+    }
+    cvStructuralChecksum    [609237503 1465451592 3957197708 1164069700]
+  }
+  slsfobj {
+    id			    20
+    name		    "Product"
+    origin		    SIMULINK_OBJ
+    slBlckType		    7
+    modelcov		    1
+    treeNode		    [17 0 19 21]
+    metricFlags		    16400
+    metrics		    [116 117]
+    cvChecksum {
+      u1		      609237503
+      u2		      1465451592
+      u3		      3957197708
+      u4		      1164069700
+    }
+    cvStructuralChecksum    [609237503 1465451592 3957197708 1164069700]
+  }
+  slsfobj {
+    id			    21
+    name		    "Product1"
+    origin		    SIMULINK_OBJ
+    slBlckType		    7
+    modelcov		    1
+    treeNode		    [17 0 20 22]
+    metricFlags		    16400
+    metrics		    [120 121]
+    cvChecksum {
+      u1		      609237503
+      u2		      1465451592
+      u3		      3957197708
+      u4		      1164069700
+    }
+    cvStructuralChecksum    [609237503 1465451592 3957197708 1164069700]
+  }
+  slsfobj {
+    id			    22
+    name		    "Sum"
+    origin		    SIMULINK_OBJ
+    slBlckType		    8
+    modelcov		    1
+    treeNode		    [17 0 21 23]
+    metricFlags		    16400
+    metrics		    [124 125]
+    cvChecksum {
+      u1		      212572301
+      u2		      2981353944
+      u3		      3675821533
+      u4		      4032357936
+    }
+    cvStructuralChecksum    [212572301 2981353944 3675821533 4032357936]
+  }
+  slsfobj {
+    id			    23
+    name		    "Sum1"
+    origin		    SIMULINK_OBJ
+    slBlckType		    8
+    modelcov		    1
+    treeNode		    [17 0 22 24]
+    metricFlags		    16400
+    metrics		    [128 129]
+    cvChecksum {
+      u1		      212572301
+      u2		      2981353944
+      u3		      3675821533
+      u4		      4032357936
+    }
+    cvStructuralChecksum    [212572301 2981353944 3675821533 4032357936]
+  }
+  slsfobj {
+    id			    24
+    name		    "Constant"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [17 0 23 25]
+    metricFlags		    16400
+    metrics		    [132 133]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    25
+    name		    "Constant1"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [17 0 24 0]
+    metricFlags		    16400
+    metrics		    [136 137]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    26
+    name		    "security_block"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [16 27 17 41]
+    metricFlags		    24667
+    metrics		    [140 141 142 143 144 145 146]
+    cvChecksum {
+      u1		      833035347
+      u2		      631616482
+      u3		      4050244070
+      u4		      3672757371
+    }
+    cvStructuralChecksum    [3920223151 2562341620 577222500 3439895834]
+    cvMetricChecksum	    [2537162265 2378724445 546774365 3863963811 0 0 0 0]
+  }
+  slsfobj {
+    id			    27
+    name		    "Security_PowerConsumption"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [26 28 0 32]
+    metricFlags		    24667
+    metrics		    [147 148 149 150 151 152 153]
+    cvChecksum {
+      u1		      2669612491
+      u2		      785212361
+      u3		      434376736
+      u4		      1363418834
+    }
+    cvStructuralChecksum    [3155253847 2287010372 214309937 797857679]
+    cvMetricChecksum	    [3196715357 1372120548 1702071415 3371470663 0 0 0 0]
+  }
+  slsfobj {
+    id			    28
+    name		    "If Action\nSubsystem1"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [27 29 0 30]
+    cvChecksum {
+      u1		      3568933692
+      u2		      811468757
+      u3		      2532813715
+      u4		      3641269578
+    }
+    cvStructuralChecksum    [3568933692 811468757 2532813715 3641269578]
+  }
+  slsfobj {
+    id			    29
+    name		    "Action Port"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [28 0 0 0]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    30
+    name		    "If"
+    origin		    SIMULINK_OBJ
+    slBlckType		    12
+    modelcov		    1
+    treeNode		    [27 0 28 31]
+    metricFlags		    24651
+    metrics		    [154 155 156 157 158 159]
+    cvChecksum {
+      u1		      3753186502
+      u2		      574398955
+      u3		      254369456
+      u4		      1557356505
+    }
+    cvStructuralChecksum    [933731976 3846261038 3580353735 3407011427]
+    cvMetricChecksum	    [2197460488 1389702521 2863899735 3364694160 0 0 0 0]
+  }
+  slsfobj {
+    id			    31
+    name		    "Constant"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [27 0 30 0]
+    metricFlags		    16400
+    metrics		    [180 181]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    32
+    name		    "Security_Temperature"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [26 33 27 37]
+    metricFlags		    24667
+    metrics		    [184 185 186 187 188 189 190]
+    cvChecksum {
+      u1		      1326078121
+      u2		      967869322
+      u3		      3988742464
+      u4		      2121409581
+    }
+    cvStructuralChecksum    [4055755396 2799266384 1616416061 3070860179]
+    cvMetricChecksum	    [1177725797 79396667 3867749743 139321376 0 0 0 0]
+  }
+  slsfobj {
+    id			    33
+    name		    "If Action\nSubsystem1"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [32 34 0 35]
+    cvChecksum {
+      u1		      3568933692
+      u2		      811468757
+      u3		      2532813715
+      u4		      3641269578
+    }
+    cvStructuralChecksum    [3568933692 811468757 2532813715 3641269578]
+  }
+  slsfobj {
+    id			    34
+    name		    "Action Port"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [33 0 0 0]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    35
+    name		    "If"
+    origin		    SIMULINK_OBJ
+    slBlckType		    12
+    modelcov		    1
+    treeNode		    [32 0 33 36]
+    metricFlags		    24651
+    metrics		    [191 192 193 194 195 196]
+    cvChecksum {
+      u1		      704071045
+      u2		      802570770
+      u3		      1662062314
+      u4		      3850586004
+    }
+    cvStructuralChecksum    [1999982047 2852352869 800038804 3192541006]
+    cvMetricChecksum	    [1416937285 888196546 2765474595 2404197198 0 0 0 0]
+  }
+  slsfobj {
+    id			    36
+    name		    "Constant"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [32 0 35 0]
+    metricFlags		    16400
+    metrics		    [217 218]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    37
+    name		    "AND"
+    origin		    SIMULINK_OBJ
+    slBlckType		    10
+    modelcov		    1
+    treeNode		    [26 0 32 38]
+    metricFlags		    16402
+    metrics		    [221 222 223]
+    cvChecksum {
+      u1		      2162428370
+      u2		      2039752962
+      u3		      1656991656
+      u4		      1776080613
+    }
+    cvStructuralChecksum    [2162428370 2039752962 1656991656 1776080613]
+  }
+  slsfobj {
+    id			    38
+    name		    "AND1"
+    origin		    SIMULINK_OBJ
+    slBlckType		    10
+    modelcov		    1
+    treeNode		    [26 0 37 39]
+    metricFlags		    16410
+    metrics		    [230 231 232 233]
+    cvChecksum {
+      u1		      2679658314
+      u2		      744586395
+      u3		      654870083
+      u4		      2854240034
+    }
+    cvStructuralChecksum    [2679658314 744586395 654870083 2854240034]
+  }
+  slsfobj {
+    id			    39
+    name		    "Switch"
+    origin		    SIMULINK_OBJ
+    slBlckType		    11
+    modelcov		    1
+    treeNode		    [26 0 38 40]
+    metricFlags		    16465
+    metrics		    [248 249 250 251]
+    cvChecksum {
+      u1		      380529366
+      u2		      3131707554
+      u3		      1898413527
+      u4		      3527332759
+    }
+    cvStructuralChecksum    [380529366 3131707554 1898413527 3527332759]
+  }
+  slsfobj {
+    id			    40
+    name		    "Constant"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [26 0 39 0]
+    metricFlags		    16400
+    metrics		    [258 259]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    41
+    name		    "user_interface"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [16 42 26 0]
+    metricFlags		    28755
+    metrics		    [262 263 264 265 266 267 268]
+    cvChecksum {
+      u1		      2929765810
+      u2		      903693085
+      u3		      1437945470
+      u4		      1763317352
+    }
+    cvStructuralChecksum    [3105754735 3744489764 461550857 1436062371]
+    cvMetricChecksum	    [618871093 4008284214 1332721948 2478702617 627457920 915751649 3791162163 2251032723]
+  }
+  slsfobj {
+    id			    42
+    name		    "input_system1"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 43 0 53]
+    metricFlags		    16467
+    metrics		    [269 270 271 272 273]
+    cvChecksum {
+      u1		      3795736536
+      u2		      2576063879
+      u3		      4181886660
+      u4		      1766322168
+    }
+    cvStructuralChecksum    [3795736536 2576063879 4181886660 1766322168]
+  }
+  slsfobj {
+    id			    43
+    name		    "adc_converter"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [42 44 0 47]
+    metricFlags		    16400
+    metrics		    [274 275]
+    cvChecksum {
+      u1		      1515799269
+      u2		      58339010
+      u3		      3741221650
+      u4		      4236045717
+    }
+    cvStructuralChecksum    [1515799269 58339010 3741221650 4236045717]
+  }
+  slsfobj {
+    id			    44
+    name		    "Gain1"
+    origin		    SIMULINK_OBJ
+    slBlckType		    14
+    modelcov		    1
+    treeNode		    [43 0 0 45]
+    metricFlags		    16400
+    metrics		    [276 277]
+    cvChecksum {
+      u1		      809807094
+      u2		      1798695193
+      u3		      3766975706
+      u4		      1168230915
+    }
+    cvStructuralChecksum    [809807094 1798695193 3766975706 1168230915]
+  }
+  slsfobj {
+    id			    45
+    name		    "Sum"
+    origin		    SIMULINK_OBJ
+    slBlckType		    8
+    modelcov		    1
+    treeNode		    [43 0 44 46]
+    metricFlags		    16400
+    metrics		    [280 281]
+    cvChecksum {
+      u1		      212572301
+      u2		      2981353944
+      u3		      3675821533
+      u4		      4032357936
+    }
+    cvStructuralChecksum    [212572301 2981353944 3675821533 4032357936]
+  }
+  slsfobj {
+    id			    46
+    name		    "Constant"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [43 0 45 0]
+    metricFlags		    16400
+    metrics		    [284 285]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    47
+    name		    "two_state_button"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [42 48 43 0]
+    metricFlags		    16467
+    metrics		    [288 289 290 291 292]
+    cvChecksum {
+      u1		      523950047
+      u2		      2480804894
+      u3		      2968471603
+      u4		      3896998296
+    }
+    cvStructuralChecksum    [523950047 2480804894 2968471603 3896998296]
+  }
+  slsfobj {
+    id			    48
+    name		    "D Latch"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [47 49 0 52]
+    metricFlags		    16467
+    metrics		    [293 294 295 296 297]
+    cvChecksum {
+      u1		      1657423298
+      u2		      331659489
+      u3		      2417075874
+      u4		      2296656950
+    }
+    cvStructuralChecksum    [1657423298 331659489 2417075874 2296656950]
+  }
+  slsfobj {
+    id			    49
+    name		    "D Latch"
+    origin		    SIMULINK_OBJ
+    isAtomicSubsytem	    1
+    modelcov		    1
+    treeNode		    [48 50 0 0]
+    metricFlags		    16467
+    metrics		    [298 299 300 301 302]
+    cvChecksum {
+      u1		      3773593753
+      u2		      643612805
+      u3		      3420419773
+      u4		      3971628146
+    }
+    cvStructuralChecksum    [3773593753 643612805 3420419773 3971628146]
+  }
+  slsfobj {
+    id			    50
+    name		    "Logic"
+    origin		    SIMULINK_OBJ
+    slBlckType		    10
+    modelcov		    1
+    treeNode		    [49 0 0 51]
+    metricFlags		    16402
+    metrics		    [307 308 309]
+    cvChecksum {
+      u1		      2990479578
+      u2		      3847778791
+      u3		      342946627
+      u4		      241626556
+    }
+    cvStructuralChecksum    [2990479578 3847778791 342946627 241626556]
+  }
+  slsfobj {
+    id			    51
+    name		    "C"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [49 0 50 0]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    52
+    name		    "Signal\nGenerator"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [47 0 48 0]
+    metricFlags		    16400
+    metrics		    [314 315]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    53
+    name		    "seg_display"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 54 42 71]
+    metricFlags		    28753
+    metrics		    [318 319 320 321 322 323]
+    cvChecksum {
+      u1		      946458039
+      u2		      1178199763
+      u3		      539522751
+      u4		      1750449549
+    }
+    cvStructuralChecksum    [384302638 4007307623 126115562 495056779]
+    cvMetricChecksum	    [4173054021 1739539033 3210677252 2018438531 581406873 4247027647 3172511899 81351533]
+  }
+  slsfobj {
+    id			    54
+    name		    "seg_display_controller"
+    origin		    SIMULINK_OBJ
+    refClass		    -99
+    isAtomicSubsytem	    1
+    modelcov		    1
+    treeNode		    [53 55 0 61]
+    metricFlags		    12369
+    metrics		    [324 325 326 327 328]
+    cvChecksum {
+      u1		      523173324
+      u2		      114651357
+      u3		      2065223247
+      u4		      819731562
+    }
+    cvStructuralChecksum    [1144512551 1452853997 1210786343 2799060411]
+    cvMetricChecksum	    [2302237002 901490523 3169490688 720878625 4196544087 418465141 4221770401 3978281004]
+  }
+  slsfobj {
+    id			    55
+    name		    " Demux "
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [54 0 0 56]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    56
+    name		    " SFunction "
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [54 0 55 57]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    57
+    name		    " Terminator "
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [54 0 56 58]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    58
+    name		    "seg_display_controller"
+    origPath		    "Klimaanlage:526:7:68:12"
+    origin		    STATEFLOW_OBJ
+    refClass		    1
+    modelcov		    1
+    treeNode		    [54 59 57 0]
+    metricFlags		    12353
+    metrics		    [329 330 331 332]
+    cvChecksum {
+      u1		      1051392312
+      u2		      1223331274
+      u3		      3440760449
+      u4		      1185499897
+    }
+    cvStructuralChecksum    [3625847512 1845143965 2693944644 100187619]
+    cvMetricChecksum	    [1847061995 1485864595 3710454963 2546201885 3681210694 1771789233 1094117518 2961318897]
+  }
+  slsfobj {
+    id			    59
+    name		    "eML_blk_kernel"
+    origin		    STATEFLOW_OBJ
+    refClass		    4
+    modelcov		    1
+    treeNode		    [58 0 0 60]
+    metricFlags		    12353
+    metrics		    [333 334 335 336]
+    code		    360
+    cvChecksum {
+      u1		      2371965427
+      u2		      1103260047
+      u3		      28361528
+      u4		      3359775020
+    }
+    cvStructuralChecksum    [4186888167 278347080 2609866229 682710900]
+    cvMetricChecksum	    [850684166 471595299 3347074425 386540257 327675311 2322495874 2096871933 865171190]
+  }
+  slsfobj {
+    id			    60
+    name		    "{eML_blk_kernel();}"
+    origin		    STATEFLOW_OBJ
+    refClass		    5
+    modelcov		    1
+    treeNode		    [58 0 59 0]
+    cvChecksum {
+      u1		      1768726420
+      u2		      2663719104
+      u3		      2976391690
+      u4		      2928307662
+    }
+    cvStructuralChecksum    [1768726420 2663719104 2976391690 2928307662]
+  }
+  slsfobj {
+    id			    61
+    name		    "Data Type Conversion"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 54 62]
+    metricFlags		    16400
+    metrics		    [361 362]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    62
+    name		    "Data Type Conversion1"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 61 63]
+    metricFlags		    16400
+    metrics		    [365 366]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    63
+    name		    "Data Type Conversion2"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 62 64]
+    metricFlags		    16400
+    metrics		    [369 370]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    64
+    name		    "Data Type Conversion3"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 63 65]
+    metricFlags		    16400
+    metrics		    [373 374]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    65
+    name		    "Data Type Conversion4"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 64 66]
+    metricFlags		    16400
+    metrics		    [377 378]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    66
+    name		    "Data Type Conversion5"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 65 67]
+    metricFlags		    16400
+    metrics		    [381 382]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    67
+    name		    "Data Type Conversion6"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 66 68]
+    metricFlags		    16400
+    metrics		    [385 386]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    68
+    name		    "Data Type Conversion7"
+    origin		    SIMULINK_OBJ
+    slBlckType		    13
+    modelcov		    1
+    treeNode		    [53 0 67 69]
+    metricFlags		    16400
+    metrics		    [389 390]
+    cvChecksum {
+      u1		      2760389557
+      u2		      2255481933
+      u3		      4222215320
+      u4		      2861845636
+    }
+    cvStructuralChecksum    [2760389557 2255481933 4222215320 2861845636]
+  }
+  slsfobj {
+    id			    69
+    name		    "Demux"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [53 0 68 70]
+    cvChecksum {
+      u1		      3439279571
+      u2		      2561743879
+      u3		      3663033115
+      u4		      195740233
+    }
+    cvStructuralChecksum    [3439279571 2561743879 3663033115 195740233]
+  }
+  slsfobj {
+    id			    70
+    name		    "Signal\nGenerator"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [53 0 69 0]
+    metricFlags		    16400
+    metrics		    [393 394]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    71
+    name		    "Digital Write"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 53 72]
+    metricFlags		    16384
+    metrics		    [397]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    72
+    name		    "Digital Write1"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 71 73]
+    metricFlags		    16384
+    metrics		    [400]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    73
+    name		    "Digital Write2"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 72 74]
+    metricFlags		    16384
+    metrics		    [403]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    74
+    name		    "Digital Write3"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 73 75]
+    metricFlags		    16384
+    metrics		    [406]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    75
+    name		    "Digital Write4"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 74 76]
+    metricFlags		    16384
+    metrics		    [409]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    76
+    name		    "Digital Write5"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 75 77]
+    metricFlags		    16384
+    metrics		    [412]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    77
+    name		    "Digital Write6"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 76 78]
+    metricFlags		    16384
+    metrics		    [415]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    78
+    name		    "Digital Write7"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [41 0 77 0]
+    metricFlags		    16384
+    metrics		    [418]
+    cvChecksum {
+      u1		      1582018934
+      u2		      4126767764
+      u3		      3076472891
+      u4		      1474694506
+    }
+    cvStructuralChecksum    [1582018934 4126767764 3076472891 1474694506]
+  }
+  slsfobj {
+    id			    79
+    name		    "thermical_vehicelbody"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [15 80 16 87]
+    metricFlags		    16400
+    metrics		    [421 422]
+    cvChecksum {
+      u1		      3006960055
+      u2		      2977822023
+      u3		      3547948503
+      u4		      379122645
+    }
+    cvStructuralChecksum    [3006960055 2977822023 3547948503 379122645]
+  }
+  slsfobj {
+    id			    80
+    name		    "Divide"
+    origin		    SIMULINK_OBJ
+    slBlckType		    7
+    modelcov		    1
+    treeNode		    [79 0 0 81]
+    metricFlags		    16400
+    metrics		    [423 424]
+    cvChecksum {
+      u1		      609237503
+      u2		      1465451592
+      u3		      3957197708
+      u4		      1164069700
+    }
+    cvStructuralChecksum    [609237503 1465451592 3957197708 1164069700]
+  }
+  slsfobj {
+    id			    81
+    name		    "divider"
+    origin		    SIMULINK_OBJ
+    slBlckType		    7
+    modelcov		    1
+    treeNode		    [79 0 80 82]
+    metricFlags		    16400
+    metrics		    [427 428]
+    cvChecksum {
+      u1		      609237503
+      u2		      1465451592
+      u3		      3957197708
+      u4		      1164069700
+    }
+    cvStructuralChecksum    [609237503 1465451592 3957197708 1164069700]
+  }
+  slsfobj {
+    id			    82
+    name		    "Sum"
+    origin		    SIMULINK_OBJ
+    slBlckType		    8
+    modelcov		    1
+    treeNode		    [79 0 81 83]
+    metricFlags		    16400
+    metrics		    [431 432]
+    cvChecksum {
+      u1		      212572301
+      u2		      2981353944
+      u3		      3675821533
+      u4		      4032357936
+    }
+    cvStructuralChecksum    [212572301 2981353944 3675821533 4032357936]
+  }
+  slsfobj {
+    id			    83
+    name		    "Sum1"
+    origin		    SIMULINK_OBJ
+    slBlckType		    8
+    modelcov		    1
+    treeNode		    [79 0 82 84]
+    metricFlags		    16400
+    metrics		    [435 436]
+    cvChecksum {
+      u1		      212572301
+      u2		      2981353944
+      u3		      3675821533
+      u4		      4032357936
+    }
+    cvStructuralChecksum    [212572301 2981353944 3675821533 4032357936]
+  }
+  slsfobj {
+    id			    84
+    name		    "C"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [79 0 83 85]
+    metricFlags		    16400
+    metrics		    [439 440]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    85
+    name		    "Integrator"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [79 0 84 86]
+    metricFlags		    16400
+    metrics		    [443 444]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    86
+    name		    "R"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [79 0 85 0]
+    metricFlags		    16400
+    metrics		    [447 448]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    87
+    name		    "Gain"
+    origin		    SIMULINK_OBJ
+    slBlckType		    14
+    modelcov		    1
+    treeNode		    [15 0 79 88]
+    metricFlags		    16400
+    metrics		    [451 452]
+    cvChecksum {
+      u1		      809807094
+      u2		      1798695193
+      u3		      3766975706
+      u4		      1168230915
+    }
+    cvStructuralChecksum    [809807094 1798695193 3766975706 1168230915]
+  }
+  slsfobj {
+    id			    88
+    name		    "Constant1"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [15 0 87 89]
+    metricFlags		    16400
+    metrics		    [455 456]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  slsfobj {
+    id			    89
+    name		    "Constant3"
+    origin		    SIMULINK_OBJ
+    modelcov		    1
+    treeNode		    [15 0 88 0]
+    metricFlags		    16400
+    metrics		    [459 460]
+    cvChecksum {
+      u1		      263423107
+      u2		      1317515632
+      u3		      6495393
+      u4		      4214387966
+    }
+    cvStructuralChecksum    [263423107 1317515632 6495393 4214387966]
+  }
+  metric {
+    id			    90
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [11 0 -1 -1]
+    dataWidth		    56
+  }
+  metric {
+    id			    91
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [18 0 -1 -1]
+    dataWidth		    59
+  }
+  metric {
+    id			    92
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [7 0 -1 -1]
+    dataWidth		    47
+  }
+  metric {
+    id			    93
+  }
+  metric {
+    id			    94
+    dataCnt		    [9 1 0 0]
+  }
+  metric {
+    id			    95
+  }
+  metric {
+    id			    96
+  }
+  metric {
+    id			    97
+    dataIdx		    [0 -1]
+    justifiedDataIdx	    [1 0]
+    dataCnt		    [48 0 -1 -1]
+    dataWidth		    269
+  }
+  metric {
+    id			    98
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [11 0 -1 -1]
+    dataWidth		    54
+  }
+  metric {
+    id			    99
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [18 0 -1 -1]
+    dataWidth		    57
+  }
+  metric {
+    id			    100
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [7 0 -1 -1]
+    dataWidth		    45
+  }
+  metric {
+    id			    101
+  }
+  metric {
+    id			    102
+    dataCnt		    [8 0 0 0]
+  }
+  metric {
+    id			    103
+  }
+  metric {
+    id			    104
+  }
+  metric {
+    id			    105
+    dataIdx		    [2 -1]
+    justifiedDataIdx	    [3 0]
+    dataCnt		    [38 0 -1 -1]
+    dataWidth		    215
+  }
+  metric {
+    id			    106
+  }
+  metric {
+    id			    107
+    dataIdx		    [4 -1]
+    justifiedDataIdx	    [5 0]
+    dataCnt		    [8 0 -1 -1]
+    dataWidth		    43
+  }
+  sigranger {
+    id			    108
+    modelcov		    1
+    slsfobj		    18
+    cov			    [0 1 1 1 0]
+  }
+  metric {
+    id			    109
+    baseObjs		    [110]
+    dataIdx		    [8 6]
+    justifiedDataIdx	    [9 7]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    110
+    modelcov		    1
+    slsfobj		    18
+    relopChkExprIdx	    -1
+    descriptor		    111
+    dc			    [1 0 10 0]
+  }
+  message {
+    id			    111
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    112
+    modelcov		    1
+    slsfobj		    19
+    cov			    [2 1 1 1 0]
+  }
+  metric {
+    id			    113
+    baseObjs		    [114]
+    dataIdx		    [13 11]
+    justifiedDataIdx	    [14 12]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    114
+    modelcov		    1
+    slsfobj		    19
+    relopChkExprIdx	    -1
+    descriptor		    115
+    dc			    [1 0 15 0]
+  }
+  message {
+    id			    115
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    116
+    modelcov		    1
+    slsfobj		    20
+    cov			    [4 1 1 1 0]
+  }
+  metric {
+    id			    117
+    baseObjs		    [118]
+    dataIdx		    [18 16]
+    justifiedDataIdx	    [19 17]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    118
+    modelcov		    1
+    slsfobj		    20
+    relopChkExprIdx	    -1
+    descriptor		    119
+    dc			    [1 0 20 0]
+  }
+  message {
+    id			    119
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    120
+    modelcov		    1
+    slsfobj		    21
+    cov			    [6 1 1 1 0]
+  }
+  metric {
+    id			    121
+    baseObjs		    [122]
+    dataIdx		    [23 21]
+    justifiedDataIdx	    [24 22]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    122
+    modelcov		    1
+    slsfobj		    21
+    relopChkExprIdx	    -1
+    descriptor		    123
+    dc			    [1 0 25 0]
+  }
+  message {
+    id			    123
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    124
+    modelcov		    1
+    slsfobj		    22
+    cov			    [8 1 1 1 0]
+  }
+  metric {
+    id			    125
+    baseObjs		    [126]
+    dataIdx		    [28 26]
+    justifiedDataIdx	    [29 27]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    126
+    modelcov		    1
+    slsfobj		    22
+    relopChkExprIdx	    -1
+    descriptor		    127
+    dc			    [1 0 30 0]
+  }
+  message {
+    id			    127
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    128
+    modelcov		    1
+    slsfobj		    23
+    cov			    [10 1 1 1 0]
+  }
+  metric {
+    id			    129
+    baseObjs		    [130]
+    dataIdx		    [33 31]
+    justifiedDataIdx	    [34 32]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    130
+    modelcov		    1
+    slsfobj		    23
+    relopChkExprIdx	    -1
+    descriptor		    131
+    dc			    [1 0 35 0]
+  }
+  message {
+    id			    131
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    132
+    modelcov		    1
+    slsfobj		    24
+    cov			    [12 1 1 1 0]
+  }
+  metric {
+    id			    133
+    baseObjs		    [134]
+    dataIdx		    [38 36]
+    justifiedDataIdx	    [39 37]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    134
+    modelcov		    1
+    slsfobj		    24
+    relopChkExprIdx	    -1
+    descriptor		    135
+    dc			    [1 0 40 0]
+  }
+  message {
+    id			    135
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    136
+    modelcov		    1
+    slsfobj		    25
+    cov			    [14 1 1 1 0]
+  }
+  metric {
+    id			    137
+    baseObjs		    [138]
+    dataIdx		    [43 41]
+    justifiedDataIdx	    [44 42]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    138
+    modelcov		    1
+    slsfobj		    25
+    relopChkExprIdx	    -1
+    descriptor		    139
+    dc			    [1 0 45 0]
+  }
+  message {
+    id			    139
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    140
+    dataIdx		    [4 -1]
+    justifiedDataIdx	    [5 0]
+    dataCnt		    [6 0 -1 -1]
+    dataWidth		    25
+  }
+  metric {
+    id			    141
+    dataIdx		    [4 -1]
+    justifiedDataIdx	    [5 0]
+    dataCnt		    [16 0 -1 -1]
+    dataWidth		    39
+  }
+  metric {
+    id			    142
+    dataIdx		    [4 -1]
+    justifiedDataIdx	    [5 0]
+    dataCnt		    [7 0 -1 -1]
+    dataWidth		    43
+  }
+  metric {
+    id			    143
+  }
+  metric {
+    id			    144
+    dataCnt		    [3 0 0 0]
+  }
+  metric {
+    id			    145
+  }
+  metric {
+    id			    146
+    dataIdx		    [46 -1]
+    justifiedDataIdx	    [47 0]
+    dataCnt		    [8 0 -1 -1]
+    dataWidth		    47
+  }
+  metric {
+    id			    147
+    dataIdx		    [6 -1]
+    justifiedDataIdx	    [7 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    148
+    dataIdx		    [6 -1]
+    justifiedDataIdx	    [7 0]
+    dataCnt		    [4 0 -1 -1]
+    dataWidth		    11
+  }
+  metric {
+    id			    149
+    dataIdx		    [6 -1]
+    justifiedDataIdx	    [7 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    14
+  }
+  metric {
+    id			    150
+  }
+  metric {
+    id			    151
+    dataCnt		    [1 0 0 0]
+  }
+  metric {
+    id			    152
+  }
+  metric {
+    id			    153
+    dataIdx		    [48 -1]
+    justifiedDataIdx	    [49 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    13
+  }
+  metric {
+    id			    154
+    baseObjs		    [160]
+    dataIdx		    [10 8]
+    justifiedDataIdx	    [11 9]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    155
+    baseObjs		    [164 165]
+    dataIdx		    [10 8]
+    justifiedDataIdx	    [11 9]
+    dataCnt		    [4 4 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    156
+    baseObjs		    [168]
+    dataIdx		    [10 8]
+    justifiedDataIdx	    [11 9]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    12
+  }
+  metric {
+    id			    157
+    dataCnt		    [1 1 0 0]
+  }
+  metric {
+    id			    158
+    baseObjs		    [170 171]
+  }
+  metric {
+    id			    159
+    baseObjs		    [178]
+    dataIdx		    [52 50]
+    justifiedDataIdx	    [53 51]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    160
+    modelcov		    1
+    slsfobj		    30
+    descriptor		    161
+    outMsgs		    [162 163]
+    dc			    [2 0 12 0]
+  }
+  message {
+    id			    161
+    keyNum		    51
+    startChar		    -1
+  }
+  message {
+    id			    162
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    163
+    keyNum		    158
+    startChar		    -1
+  }
+  condition {
+    id			    164
+    modelcov		    1
+    slsfobj		    30
+    key			    -1
+    descriptor		    166
+    coverage		    [13 12 0]
+  }
+  condition {
+    id			    165
+    modelcov		    1
+    slsfobj		    30
+    key			    -1
+    descriptor		    167
+    coverage		    [15 14 0]
+  }
+  message {
+    id			    166
+    keyNum		    104
+    intParams		    [1]
+    txtParams		    "u1(1)<5"
+    startChar		    -1
+  }
+  message {
+    id			    167
+    keyNum		    104
+    intParams		    [2]
+    txtParams		    "u1(1)>-5"
+    startChar		    -1
+  }
+  mcdcentry {
+    id			    168
+    modelcov		    1
+    slsfobj		    30
+    key			    -1
+    numPredicates	    2
+    pathCount		    3
+    pathStorageCount	    1
+    mcdcMode		    MCDCMODE_MASKING
+    bst			    [0 1 -2]
+    expressionTree	    [3 -1 -1 0 3 -1 -1 1 3 2 2 -1]
+    descriptor		    169
+    conditions		    [164 165]
+    dataBaseIdx		    [12 14 16 18 9999 0]
+  }
+  message {
+    id			    169
+    keyNum		    105
+    startChar		    -1
+  }
+  decision {
+    id			    170
+    modelcov		    1
+    slsfobj		    30
+    relopChkExprIdx	    -1
+    descriptor		    172
+    outMsgs		    [173 174]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    171
+    modelcov		    1
+    slsfobj		    30
+    relopChkExprIdx	    -1
+    descriptor		    175
+    outMsgs		    [176 177]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    172
+    keyNum		    162
+    txtParams		    "u1(1) - 5"
+    startChar		    -1
+  }
+  message {
+    id			    173
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    174
+    keyNum		    42
+    startChar		    -1
+  }
+  message {
+    id			    175
+    keyNum		    162
+    txtParams		    "u1(1) - (-5)"
+    startChar		    -1
+  }
+  message {
+    id			    176
+    keyNum		    36
+    startChar		    -1
+  }
+  message {
+    id			    177
+    keyNum		    41
+    startChar		    -1
+  }
+  decision {
+    id			    178
+    modelcov		    1
+    slsfobj		    30
+    relopChkExprIdx	    -1
+    descriptor		    179
+    dc			    [1 0 54 0]
+  }
+  message {
+    id			    179
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    180
+    modelcov		    1
+    slsfobj		    31
+    cov			    [16 1 1 1 0]
+  }
+  metric {
+    id			    181
+    baseObjs		    [182]
+    dataIdx		    [57 55]
+    justifiedDataIdx	    [58 56]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    182
+    modelcov		    1
+    slsfobj		    31
+    relopChkExprIdx	    -1
+    descriptor		    183
+    dc			    [1 0 59 0]
+  }
+  message {
+    id			    183
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    184
+    dataIdx		    [14 -1]
+    justifiedDataIdx	    [15 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    185
+    dataIdx		    [16 -1]
+    justifiedDataIdx	    [17 0]
+    dataCnt		    [4 0 -1 -1]
+    dataWidth		    11
+  }
+  metric {
+    id			    186
+    dataIdx		    [19 -1]
+    justifiedDataIdx	    [20 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    14
+  }
+  metric {
+    id			    187
+  }
+  metric {
+    id			    188
+    dataCnt		    [1 0 0 0]
+  }
+  metric {
+    id			    189
+  }
+  metric {
+    id			    190
+    dataIdx		    [60 -1]
+    justifiedDataIdx	    [61 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    13
+  }
+  metric {
+    id			    191
+    baseObjs		    [197]
+    dataIdx		    [18 16]
+    justifiedDataIdx	    [19 17]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    192
+    baseObjs		    [201 202]
+    dataIdx		    [20 18]
+    justifiedDataIdx	    [21 19]
+    dataCnt		    [4 4 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    193
+    baseObjs		    [205]
+    dataIdx		    [23 21]
+    justifiedDataIdx	    [24 22]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    12
+  }
+  metric {
+    id			    194
+    dataCnt		    [1 1 0 0]
+  }
+  metric {
+    id			    195
+    baseObjs		    [207 208]
+  }
+  metric {
+    id			    196
+    baseObjs		    [215]
+    dataIdx		    [64 62]
+    justifiedDataIdx	    [65 63]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    197
+    modelcov		    1
+    slsfobj		    35
+    descriptor		    198
+    outMsgs		    [199 200]
+    dc			    [2 0 20 0]
+  }
+  message {
+    id			    198
+    keyNum		    51
+    startChar		    -1
+  }
+  message {
+    id			    199
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    200
+    keyNum		    158
+    startChar		    -1
+  }
+  condition {
+    id			    201
+    modelcov		    1
+    slsfobj		    35
+    key			    -1
+    descriptor		    203
+    coverage		    [23 22 0]
+  }
+  condition {
+    id			    202
+    modelcov		    1
+    slsfobj		    35
+    key			    -1
+    descriptor		    204
+    coverage		    [25 24 0]
+  }
+  message {
+    id			    203
+    keyNum		    104
+    intParams		    [1]
+    txtParams		    "u1(1)<50"
+    startChar		    -1
+  }
+  message {
+    id			    204
+    keyNum		    104
+    intParams		    [2]
+    txtParams		    "u1(1)>-20"
+    startChar		    -1
+  }
+  mcdcentry {
+    id			    205
+    modelcov		    1
+    slsfobj		    35
+    key			    -1
+    numPredicates	    2
+    pathCount		    3
+    pathStorageCount	    1
+    mcdcMode		    MCDCMODE_MASKING
+    bst			    [0 1 -2]
+    expressionTree	    [3 -1 -1 0 3 -1 -1 1 3 2 2 -1]
+    descriptor		    206
+    conditions		    [201 202]
+    dataBaseIdx		    [25 27 29 31 9999 0]
+  }
+  message {
+    id			    206
+    keyNum		    105
+    startChar		    -1
+  }
+  decision {
+    id			    207
+    modelcov		    1
+    slsfobj		    35
+    relopChkExprIdx	    -1
+    descriptor		    209
+    outMsgs		    [210 211]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    208
+    modelcov		    1
+    slsfobj		    35
+    relopChkExprIdx	    -1
+    descriptor		    212
+    outMsgs		    [213 214]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    209
+    keyNum		    162
+    txtParams		    "u1(1) - 50"
+    startChar		    -1
+  }
+  message {
+    id			    210
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    211
+    keyNum		    42
+    startChar		    -1
+  }
+  message {
+    id			    212
+    keyNum		    162
+    txtParams		    "u1(1) - (-20)"
+    startChar		    -1
+  }
+  message {
+    id			    213
+    keyNum		    36
+    startChar		    -1
+  }
+  message {
+    id			    214
+    keyNum		    41
+    startChar		    -1
+  }
+  decision {
+    id			    215
+    modelcov		    1
+    slsfobj		    35
+    relopChkExprIdx	    -1
+    descriptor		    216
+    dc			    [1 0 66 0]
+  }
+  message {
+    id			    216
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    217
+    modelcov		    1
+    slsfobj		    36
+    cov			    [18 1 1 1 0]
+  }
+  metric {
+    id			    218
+    baseObjs		    [219]
+    dataIdx		    [69 67]
+    justifiedDataIdx	    [70 68]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    219
+    modelcov		    1
+    slsfobj		    36
+    relopChkExprIdx	    -1
+    descriptor		    220
+    dc			    [1 0 71 0]
+  }
+  message {
+    id			    220
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    221
+    baseObjs		    [224 225]
+    dataIdx		    [28 26]
+    justifiedDataIdx	    [29 27]
+    dataCnt		    [4 4 -1 -1]
+    dataWidth		    9
+  }
+  sigranger {
+    id			    222
+    modelcov		    1
+    slsfobj		    37
+    cov			    [20 1 1 1 0]
+  }
+  metric {
+    id			    223
+    baseObjs		    [228]
+    dataIdx		    [74 72]
+    justifiedDataIdx	    [75 73]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  condition {
+    id			    224
+    modelcov		    1
+    slsfobj		    37
+    key			    -1
+    descriptor		    226
+    cascMCDC		    [0 38 0]
+    coverage		    [31 30 0]
+  }
+  condition {
+    id			    225
+    modelcov		    1
+    slsfobj		    37
+    key			    -1
+    descriptor		    227
+    cascMCDC		    [0 38 1]
+    coverage		    [33 32 0]
+  }
+  message {
+    id			    226
+    keyNum		    54
+    intParams		    [1]
+    startChar		    -1
+  }
+  message {
+    id			    227
+    keyNum		    54
+    intParams		    [2]
+    startChar		    -1
+  }
+  decision {
+    id			    228
+    modelcov		    1
+    slsfobj		    37
+    relopChkExprIdx	    -1
+    descriptor		    229
+    dc			    [1 0 76 0]
+  }
+  message {
+    id			    229
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    230
+    baseObjs		    [234 235]
+    dataIdx		    [36 34]
+    justifiedDataIdx	    [37 35]
+    dataCnt		    [4 4 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    231
+    baseObjs		    [238]
+    dataIdx		    [34 32]
+    justifiedDataIdx	    [35 33]
+    dataCnt		    [3 3 -1 -1]
+    dataWidth		    15
+  }
+  sigranger {
+    id			    232
+    modelcov		    1
+    slsfobj		    38
+    cov			    [22 1 1 1 0]
+  }
+  metric {
+    id			    233
+    baseObjs		    [246]
+    dataIdx		    [79 77]
+    justifiedDataIdx	    [80 78]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  condition {
+    id			    234
+    modelcov		    1
+    slsfobj		    38
+    key			    -1
+    descriptor		    236
+    cascMCDC		    [0 38 -1]
+    coverage		    [39 38 0]
+  }
+  condition {
+    id			    235
+    modelcov		    1
+    slsfobj		    38
+    key			    -1
+    descriptor		    237
+    cascMCDC		    [0 38 2]
+    coverage		    [41 40 0]
+  }
+  message {
+    id			    236
+    keyNum		    54
+    intParams		    [1]
+    startChar		    -1
+  }
+  message {
+    id			    237
+    keyNum		    54
+    intParams		    [2]
+    startChar		    -1
+  }
+  mcdcentry {
+    id			    238
+    modelcov		    1
+    slsfobj		    38
+    key			    -1
+    numPredicates	    3
+    pathCount		    4
+    pathStorageCount	    1
+    shortCircuiting	    SHRTCIRCUIT_OFF
+    mcdcMode		    MCDCMODE_MASKING
+    bst			    [0 1 -3 2 -3]
+    expressionTree	    [5 -1 -1 0 -1 2 5 -1 -1 1 -1 3 5 2 2 4 4 -1]
+    descriptor		    239
+    conditions		    [240 242 244]
+    cascMCDC		    [1 [37 38]]
+    dataBaseIdx		    [36 39 42 45 9999 0]
+  }
+  message {
+    id			    239
+    keyNum		    162
+    txtParams		    "(C1 && C2) && C3"
+    startChar		    -1
+  }
+  condition {
+    id			    240
+    modelcov		    1
+    slsfobj		    38
+    key			    -1
+    descriptor		    241
+    cascMCDC		    [1 37 0]
+  }
+  message {
+    id			    241
+    keyNum		    162
+    intParams		    [1]
+    txtParams		    " "
+    startChar		    -1
+  }
+  condition {
+    id			    242
+    modelcov		    1
+    slsfobj		    38
+    key			    -1
+    descriptor		    243
+    cascMCDC		    [1 37 1]
+  }
+  message {
+    id			    243
+    keyNum		    162
+    intParams		    [2]
+    txtParams		    " "
+    startChar		    -1
+  }
+  condition {
+    id			    244
+    modelcov		    1
+    slsfobj		    38
+    key			    -1
+    descriptor		    245
+    cascMCDC		    [1 38 1]
+  }
+  message {
+    id			    245
+    keyNum		    162
+    intParams		    [3]
+    txtParams		    " "
+    startChar		    -1
+  }
+  decision {
+    id			    246
+    modelcov		    1
+    slsfobj		    38
+    relopChkExprIdx	    -1
+    descriptor		    247
+    dc			    [1 0 81 0]
+  }
+  message {
+    id			    247
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    248
+    baseObjs		    [252]
+    dataIdx		    [24 22]
+    justifiedDataIdx	    [25 23]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  sigranger {
+    id			    249
+    modelcov		    1
+    slsfobj		    39
+    cov			    [24 1 1 1 0]
+  }
+  metric {
+    id			    250
+    dataCnt		    [1 1 0 0]
+  }
+  metric {
+    id			    251
+    baseObjs		    [256]
+    dataIdx		    [84 82]
+    justifiedDataIdx	    [85 83]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    252
+    modelcov		    1
+    slsfobj		    39
+    descriptor		    253
+    outMsgs		    [254 255]
+    dc			    [2 0 26 0]
+  }
+  message {
+    id			    253
+    keyNum		    120
+    startChar		    -1
+  }
+  message {
+    id			    254
+    keyNum		    131
+    startChar		    -1
+  }
+  message {
+    id			    255
+    keyNum		    130
+    startChar		    -1
+  }
+  decision {
+    id			    256
+    modelcov		    1
+    slsfobj		    39
+    relopChkExprIdx	    -1
+    descriptor		    257
+    dc			    [1 0 86 0]
+  }
+  message {
+    id			    257
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    258
+    modelcov		    1
+    slsfobj		    40
+    cov			    [26 1 1 1 0]
+  }
+  metric {
+    id			    259
+    baseObjs		    [260]
+    dataIdx		    [89 87]
+    justifiedDataIdx	    [90 88]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    260
+    modelcov		    1
+    slsfobj		    40
+    relopChkExprIdx	    -1
+    descriptor		    261
+    dc			    [1 0 91 0]
+  }
+  message {
+    id			    261
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    262
+    dataIdx		    [28 -1]
+    justifiedDataIdx	    [29 0]
+    dataCnt		    [5 0 -1 -1]
+    dataWidth		    28
+  }
+  metric {
+    id			    263
+    dataIdx		    [42 -1]
+    justifiedDataIdx	    [43 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    17
+  }
+  metric {
+    id			    264
+  }
+  metric {
+    id			    265
+    dataCnt		    [5 0 0 0]
+  }
+  metric {
+    id			    266
+  }
+  metric {
+    id			    267
+  }
+  metric {
+    id			    268
+    dataIdx		    [92 -1]
+    justifiedDataIdx	    [93 0]
+    dataCnt		    [22 0 -1 -1]
+    dataWidth		    125
+  }
+  metric {
+    id			    269
+    dataIdx		    [30 -1]
+    justifiedDataIdx	    [31 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    13
+  }
+  metric {
+    id			    270
+    dataIdx		    [44 -1]
+    justifiedDataIdx	    [45 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    15
+  }
+  metric {
+    id			    271
+  }
+  metric {
+    id			    272
+    dataCnt		    [2 0 0 0]
+  }
+  metric {
+    id			    273
+    dataIdx		    [94 -1]
+    justifiedDataIdx	    [95 0]
+    dataCnt		    [5 0 -1 -1]
+    dataWidth		    36
+  }
+  metric {
+    id			    274
+  }
+  metric {
+    id			    275
+    dataIdx		    [96 -1]
+    justifiedDataIdx	    [97 0]
+    dataCnt		    [3 0 -1 -1]
+    dataWidth		    18
+  }
+  sigranger {
+    id			    276
+    modelcov		    1
+    slsfobj		    44
+    cov			    [28 1 1 1 0]
+  }
+  metric {
+    id			    277
+    baseObjs		    [278]
+    dataIdx		    [100 98]
+    justifiedDataIdx	    [101 99]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    278
+    modelcov		    1
+    slsfobj		    44
+    relopChkExprIdx	    -1
+    descriptor		    279
+    dc			    [1 0 102 0]
+  }
+  message {
+    id			    279
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    280
+    modelcov		    1
+    slsfobj		    45
+    cov			    [30 1 1 1 0]
+  }
+  metric {
+    id			    281
+    baseObjs		    [282]
+    dataIdx		    [105 103]
+    justifiedDataIdx	    [106 104]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    282
+    modelcov		    1
+    slsfobj		    45
+    relopChkExprIdx	    -1
+    descriptor		    283
+    dc			    [1 0 107 0]
+  }
+  message {
+    id			    283
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    284
+    modelcov		    1
+    slsfobj		    46
+    cov			    [32 1 1 1 0]
+  }
+  metric {
+    id			    285
+    baseObjs		    [286]
+    dataIdx		    [110 108]
+    justifiedDataIdx	    [111 109]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    286
+    modelcov		    1
+    slsfobj		    46
+    relopChkExprIdx	    -1
+    descriptor		    287
+    dc			    [1 0 112 0]
+  }
+  message {
+    id			    287
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    288
+    dataIdx		    [32 -1]
+    justifiedDataIdx	    [33 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    11
+  }
+  metric {
+    id			    289
+    dataIdx		    [46 -1]
+    justifiedDataIdx	    [47 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    13
+  }
+  metric {
+    id			    290
+  }
+  metric {
+    id			    291
+    dataCnt		    [2 0 0 0]
+  }
+  metric {
+    id			    292
+    dataIdx		    [113 -1]
+    justifiedDataIdx	    [114 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    17
+  }
+  metric {
+    id			    293
+    dataIdx		    [34 -1]
+    justifiedDataIdx	    [35 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    294
+    dataIdx		    [48 -1]
+    justifiedDataIdx	    [49 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    11
+  }
+  metric {
+    id			    295
+  }
+  metric {
+    id			    296
+    dataCnt		    [2 0 0 0]
+  }
+  metric {
+    id			    297
+    dataIdx		    [115 -1]
+    justifiedDataIdx	    [116 0]
+    dataCnt		    [1 0 -1 -1]
+    dataWidth		    10
+  }
+  metric {
+    id			    298
+    baseObjs		    [303]
+    dataIdx		    [38 36]
+    justifiedDataIdx	    [39 37]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  metric {
+    id			    299
+    dataIdx		    [50 -1]
+    justifiedDataIdx	    [51 0]
+    dataCnt		    [2 0 -1 -1]
+    dataWidth		    9
+  }
+  metric {
+    id			    300
+  }
+  metric {
+    id			    301
+    dataIdx		    [1 1]
+    dataCnt		    [2 2 0 0]
+  }
+  metric {
+    id			    302
+    dataIdx		    [117 -1]
+    justifiedDataIdx	    [118 0]
+    dataCnt		    [1 0 -1 -1]
+    dataWidth		    8
+  }
+  decision {
+    id			    303
+    modelcov		    1
+    slsfobj		    49
+    descriptor		    304
+    outMsgs		    [305 306]
+    dc			    [2 0 40 0]
+  }
+  message {
+    id			    304
+    keyNum		    107
+    startChar		    -1
+  }
+  message {
+    id			    305
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    306
+    keyNum		    158
+    startChar		    -1
+  }
+  metric {
+    id			    307
+    baseObjs		    [310]
+    dataIdx		    [54 52]
+    justifiedDataIdx	    [55 53]
+    dataCnt		    [2 2 -1 -1]
+    dataWidth		    7
+  }
+  sigranger {
+    id			    308
+    modelcov		    1
+    slsfobj		    50
+    cov			    [34 1 1 1 0]
+  }
+  metric {
+    id			    309
+    baseObjs		    [312]
+    dataIdx		    [121 119]
+    justifiedDataIdx	    [122 120]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  condition {
+    id			    310
+    modelcov		    1
+    slsfobj		    50
+    key			    -1
+    descriptor		    311
+    coverage		    [57 56 0]
+  }
+  message {
+    id			    311
+    keyNum		    54
+    intParams		    [1 1]
+    startChar		    -1
+  }
+  decision {
+    id			    312
+    modelcov		    1
+    slsfobj		    50
+    relopChkExprIdx	    -1
+    descriptor		    313
+    dc			    [1 0 123 0]
+  }
+  message {
+    id			    313
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    314
+    modelcov		    1
+    slsfobj		    52
+    cov			    [36 1 1 1 0]
+  }
+  metric {
+    id			    315
+    baseObjs		    [316]
+    dataIdx		    [126 124]
+    justifiedDataIdx	    [127 125]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    316
+    modelcov		    1
+    slsfobj		    52
+    relopChkExprIdx	    -1
+    descriptor		    317
+    dc			    [1 0 128 0]
+  }
+  message {
+    id			    317
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    318
+    dataIdx		    [42 -1]
+    justifiedDataIdx	    [43 0]
+    dataCnt		    [3 0 -1 -1]
+    dataWidth		    14
+  }
+  metric {
+    id			    319
+  }
+  metric {
+    id			    320
+    dataCnt		    [3 0 0 0]
+  }
+  metric {
+    id			    321
+  }
+  metric {
+    id			    322
+  }
+  metric {
+    id			    323
+    dataIdx		    [129 -1]
+    justifiedDataIdx	    [130 0]
+    dataCnt		    [9 0 -1 -1]
+    dataWidth		    48
+  }
+  metric {
+    id			    324
+    dataIdx		    [44 -1]
+    justifiedDataIdx	    [45 0]
+    dataCnt		    [3 0 -1 -1]
+    dataWidth		    12
+  }
+  sigranger {
+    id			    325
+    modelcov		    1
+    slsfobj		    54
+    cov			    [38 2 7 1 2 0 0]
+  }
+  metric {
+    id			    326
+    dataIdx		    [1 1]
+    dataCnt		    [3 1 0 0]
+  }
+  metric {
+    id			    327
+  }
+  metric {
+    id			    328
+  }
+  metric {
+    id			    329
+    dataIdx		    [46 -1]
+    justifiedDataIdx	    [47 0]
+    dataCnt		    [3 0 -1 -1]
+    dataWidth		    10
+  }
+  metric {
+    id			    330
+    dataCnt		    [2 0 0 0]
+  }
+  metric {
+    id			    331
+  }
+  metric {
+    id			    332
+  }
+  metric {
+    id			    333
+    baseObjs		    [337 338]
+    dataIdx		    [50 48]
+    justifiedDataIdx	    [51 49]
+    dataCnt		    [3 3 -1 -1]
+    dataWidth		    8
+  }
+  metric {
+    id			    334
+    dataIdx		    [1 1]
+    dataCnt		    [2 2 0 0]
+  }
+  metric {
+    id			    335
+    baseObjs		    [344 345 346]
+  }
+  metric {
+    id			    336
+    baseObjs		    [356]
+  }
+  decision {
+    id			    337
+    modelcov		    1
+    slsfobj		    59
+    descriptor		    339
+    outMsgs		    [340]
+    dc			    [1 0 52 0]
+  }
+  decision {
+    id			    338
+    modelcov		    1
+    slsfobj		    59
+    descriptor		    341
+    outMsgs		    [342 343]
+    dc			    [2 0 53 0]
+  }
+  message {
+    id			    339
+    keyNum		    164
+    length		    64
+  }
+  message {
+    id			    340
+    keyNum		    154
+    startChar		    65
+    length		    1261
+  }
+  message {
+    id			    341
+    keyNum		    164
+    startChar		    1094
+    length		    15
+  }
+  message {
+    id			    342
+    keyNum		    159
+    startChar		    1211
+    length		    111
+  }
+  message {
+    id			    343
+    keyNum		    158
+    startChar		    1109
+    length		    102
+  }
+  decision {
+    id			    344
+    modelcov		    1
+    slsfobj		    59
+    relopChkExprIdx	    -1
+    descriptor		    347
+    outMsgs		    [348 349]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    345
+    modelcov		    1
+    slsfobj		    59
+    relopChkExprIdx	    -1
+    descriptor		    350
+    outMsgs		    [351 352]
+    dc			    [2 0 0 0]
+  }
+  decision {
+    id			    346
+    modelcov		    1
+    slsfobj		    59
+    relopChkExprIdx	    -1
+    descriptor		    353
+    outMsgs		    [354 355]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    347
+    keyNum		    164
+    startChar		    1021
+    length		    11
+  }
+  message {
+    id			    348
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    349
+    keyNum		    158
+    startChar		    1021
+    length		    11
+  }
+  message {
+    id			    350
+    keyNum		    164
+    startChar		    1137
+    length		    9
+  }
+  message {
+    id			    351
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    352
+    keyNum		    158
+    startChar		    1137
+    length		    9
+  }
+  message {
+    id			    353
+    keyNum		    164
+    startChar		    1244
+    length		    9
+  }
+  message {
+    id			    354
+    keyNum		    159
+    startChar		    -1
+  }
+  message {
+    id			    355
+    keyNum		    158
+    startChar		    1244
+    length		    9
+  }
+  decision {
+    id			    356
+    modelcov		    1
+    slsfobj		    59
+    descriptor		    357
+    outMsgs		    [358 359]
+    dc			    [2 0 0 0]
+  }
+  message {
+    id			    357
+    keyNum		    162
+    intParams		    [1097 1108]
+    txtParams		    " - "
+    startChar		    1097
+    length		    12
+  }
+  message {
+    id			    358
+    keyNum		    35
+    startChar		    -1
+  }
+  message {
+    id			    359
+    keyNum		    41
+    startChar		    -1
+  }
+  codeblock {
+    id			    360
+    slsfobj		    59
+    code		    "function [segment, select] = SevenSegmentControl(value, toggle)\n% Eingänge:\n% value: Zahlenwert (0–"
+    "99), der angezeigt werden soll\n% toggle: Umschaltsignal (0 oder 1) zum Wechsel zwischen Zehner- und Einerstelle\n"
+    "\n% Ausgänge:\n% segment: 8-Bit-Signal für die Segmente (a-g und dp)\n% select: 2-Bit-Signal zur Aktivierung ein"
+    "es Displays\n\n% Begrenzung des Werts auf den Bereich 0–99\nvalue = max(0, min(99, value));\n\n% Segment-Codes f"
+    "ür 0–9 (a-g, dp: [abcdefg.dp])\nsegments_tens = [\n    1,0,0,0,0,0,0; % 0\n    1,1,1,1,0,0,1; % 1\n    0,1,0,0,"
+    "1,0,0; % 2\n    1,1,1,0,0,0,0; % 3\n    0,0,1,1,0,0,1; % 4\n    0,0,1,0,0,1,0; % 5\n    0,0,0,0,0,1,0; % 6\n    1,"
+    "1,1,1,0,0,0; % 7\n    0,0,0,0,0,0,0; % 8\n    0,0,1,0,0,0,0; % 9\n];\n\nsegments_ones = [\n    0,1,1,1,1,1,1; % 0\n"
+    "    0,0,0,0,1,1,0; % 1\n    1,0,1,1,0,1,1; % 2\n    0,0,0,1,1,1,1; % 3\n    1,1,0,0,1,1,0; % 4\n    1,1,0,1,1,0,1;"
+    " % 5\n    1,1,1,1,1,0,1; % 6\n    0,0,0,0,1,1,1; % 7\n    1,1,1,1,1,1,1; % 8\n    1,1,0,1,1,1,1; % 9\n];\n\n% Zerl"
+    "ege den Wert in Zehner- und Einerstelle\ntens = floor(value / 10);\nones = mod(value, 10);\n\n% Anzeigelogik basie"
+    "rend auf toggle\nif toggle == 1\n    segment = segments_tens(tens + 1,:); % Zehnerstelle\n    select = 1; % Aktivi"
+    "ert das erste Display\nelse\n    segment = segments_ones(ones + 1,:); % Einerstelle\n    select = 0; % Aktiviert d"
+    "as zweite Display\nend\nend\n\n"
+    totalNumOfObjs	    [2 0 0 0]
+  }
+  sigranger {
+    id			    361
+    modelcov		    1
+    slsfobj		    61
+    cov			    [54 1 1 1 0]
+  }
+  metric {
+    id			    362
+    baseObjs		    [363]
+    dataIdx		    [133 131]
+    justifiedDataIdx	    [134 132]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    363
+    modelcov		    1
+    slsfobj		    61
+    relopChkExprIdx	    -1
+    descriptor		    364
+    dc			    [1 0 135 0]
+  }
+  message {
+    id			    364
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    365
+    modelcov		    1
+    slsfobj		    62
+    cov			    [56 1 1 1 0]
+  }
+  metric {
+    id			    366
+    baseObjs		    [367]
+    dataIdx		    [138 136]
+    justifiedDataIdx	    [139 137]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    367
+    modelcov		    1
+    slsfobj		    62
+    relopChkExprIdx	    -1
+    descriptor		    368
+    dc			    [1 0 140 0]
+  }
+  message {
+    id			    368
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    369
+    modelcov		    1
+    slsfobj		    63
+    cov			    [58 1 1 1 0]
+  }
+  metric {
+    id			    370
+    baseObjs		    [371]
+    dataIdx		    [143 141]
+    justifiedDataIdx	    [144 142]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    371
+    modelcov		    1
+    slsfobj		    63
+    relopChkExprIdx	    -1
+    descriptor		    372
+    dc			    [1 0 145 0]
+  }
+  message {
+    id			    372
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    373
+    modelcov		    1
+    slsfobj		    64
+    cov			    [60 1 1 1 0]
+  }
+  metric {
+    id			    374
+    baseObjs		    [375]
+    dataIdx		    [148 146]
+    justifiedDataIdx	    [149 147]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    375
+    modelcov		    1
+    slsfobj		    64
+    relopChkExprIdx	    -1
+    descriptor		    376
+    dc			    [1 0 150 0]
+  }
+  message {
+    id			    376
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    377
+    modelcov		    1
+    slsfobj		    65
+    cov			    [62 1 1 1 0]
+  }
+  metric {
+    id			    378
+    baseObjs		    [379]
+    dataIdx		    [153 151]
+    justifiedDataIdx	    [154 152]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    379
+    modelcov		    1
+    slsfobj		    65
+    relopChkExprIdx	    -1
+    descriptor		    380
+    dc			    [1 0 155 0]
+  }
+  message {
+    id			    380
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    381
+    modelcov		    1
+    slsfobj		    66
+    cov			    [64 1 1 1 0]
+  }
+  metric {
+    id			    382
+    baseObjs		    [383]
+    dataIdx		    [158 156]
+    justifiedDataIdx	    [159 157]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    383
+    modelcov		    1
+    slsfobj		    66
+    relopChkExprIdx	    -1
+    descriptor		    384
+    dc			    [1 0 160 0]
+  }
+  message {
+    id			    384
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    385
+    modelcov		    1
+    slsfobj		    67
+    cov			    [66 1 1 1 0]
+  }
+  metric {
+    id			    386
+    baseObjs		    [387]
+    dataIdx		    [163 161]
+    justifiedDataIdx	    [164 162]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    387
+    modelcov		    1
+    slsfobj		    67
+    relopChkExprIdx	    -1
+    descriptor		    388
+    dc			    [1 0 165 0]
+  }
+  message {
+    id			    388
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    389
+    modelcov		    1
+    slsfobj		    68
+    cov			    [68 1 1 1 0]
+  }
+  metric {
+    id			    390
+    baseObjs		    [391]
+    dataIdx		    [168 166]
+    justifiedDataIdx	    [169 167]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    391
+    modelcov		    1
+    slsfobj		    68
+    relopChkExprIdx	    -1
+    descriptor		    392
+    dc			    [1 0 170 0]
+  }
+  message {
+    id			    392
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    393
+    modelcov		    1
+    slsfobj		    70
+    cov			    [70 1 1 1 0]
+  }
+  metric {
+    id			    394
+    baseObjs		    [395]
+    dataIdx		    [173 171]
+    justifiedDataIdx	    [174 172]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    395
+    modelcov		    1
+    slsfobj		    70
+    relopChkExprIdx	    -1
+    descriptor		    396
+    dc			    [1 0 175 0]
+  }
+  message {
+    id			    396
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    397
+    baseObjs		    [398]
+    dataIdx		    [178 176]
+    justifiedDataIdx	    [179 177]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    398
+    modelcov		    1
+    slsfobj		    71
+    relopChkExprIdx	    -1
+    descriptor		    399
+    dc			    [1 0 180 0]
+  }
+  message {
+    id			    399
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    400
+    baseObjs		    [401]
+    dataIdx		    [183 181]
+    justifiedDataIdx	    [184 182]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    401
+    modelcov		    1
+    slsfobj		    72
+    relopChkExprIdx	    -1
+    descriptor		    402
+    dc			    [1 0 185 0]
+  }
+  message {
+    id			    402
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    403
+    baseObjs		    [404]
+    dataIdx		    [188 186]
+    justifiedDataIdx	    [189 187]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    404
+    modelcov		    1
+    slsfobj		    73
+    relopChkExprIdx	    -1
+    descriptor		    405
+    dc			    [1 0 190 0]
+  }
+  message {
+    id			    405
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    406
+    baseObjs		    [407]
+    dataIdx		    [193 191]
+    justifiedDataIdx	    [194 192]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    407
+    modelcov		    1
+    slsfobj		    74
+    relopChkExprIdx	    -1
+    descriptor		    408
+    dc			    [1 0 195 0]
+  }
+  message {
+    id			    408
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    409
+    baseObjs		    [410]
+    dataIdx		    [198 196]
+    justifiedDataIdx	    [199 197]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    410
+    modelcov		    1
+    slsfobj		    75
+    relopChkExprIdx	    -1
+    descriptor		    411
+    dc			    [1 0 200 0]
+  }
+  message {
+    id			    411
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    412
+    baseObjs		    [413]
+    dataIdx		    [203 201]
+    justifiedDataIdx	    [204 202]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    413
+    modelcov		    1
+    slsfobj		    76
+    relopChkExprIdx	    -1
+    descriptor		    414
+    dc			    [1 0 205 0]
+  }
+  message {
+    id			    414
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    415
+    baseObjs		    [416]
+    dataIdx		    [208 206]
+    justifiedDataIdx	    [209 207]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    416
+    modelcov		    1
+    slsfobj		    77
+    relopChkExprIdx	    -1
+    descriptor		    417
+    dc			    [1 0 210 0]
+  }
+  message {
+    id			    417
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    418
+    baseObjs		    [419]
+    dataIdx		    [213 211]
+    justifiedDataIdx	    [214 212]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    419
+    modelcov		    1
+    slsfobj		    78
+    relopChkExprIdx	    -1
+    descriptor		    420
+    dc			    [1 0 215 0]
+  }
+  message {
+    id			    420
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  metric {
+    id			    421
+  }
+  metric {
+    id			    422
+    dataIdx		    [216 -1]
+    justifiedDataIdx	    [217 0]
+    dataCnt		    [7 0 -1 -1]
+    dataWidth		    38
+  }
+  sigranger {
+    id			    423
+    modelcov		    1
+    slsfobj		    80
+    cov			    [72 1 1 1 0]
+  }
+  metric {
+    id			    424
+    baseObjs		    [425]
+    dataIdx		    [220 218]
+    justifiedDataIdx	    [221 219]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    425
+    modelcov		    1
+    slsfobj		    80
+    relopChkExprIdx	    -1
+    descriptor		    426
+    dc			    [1 0 222 0]
+  }
+  message {
+    id			    426
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    427
+    modelcov		    1
+    slsfobj		    81
+    cov			    [74 1 1 1 0]
+  }
+  metric {
+    id			    428
+    baseObjs		    [429]
+    dataIdx		    [225 223]
+    justifiedDataIdx	    [226 224]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    429
+    modelcov		    1
+    slsfobj		    81
+    relopChkExprIdx	    -1
+    descriptor		    430
+    dc			    [1 0 227 0]
+  }
+  message {
+    id			    430
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    431
+    modelcov		    1
+    slsfobj		    82
+    cov			    [76 1 1 1 0]
+  }
+  metric {
+    id			    432
+    baseObjs		    [433]
+    dataIdx		    [230 228]
+    justifiedDataIdx	    [231 229]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    433
+    modelcov		    1
+    slsfobj		    82
+    relopChkExprIdx	    -1
+    descriptor		    434
+    dc			    [1 0 232 0]
+  }
+  message {
+    id			    434
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    435
+    modelcov		    1
+    slsfobj		    83
+    cov			    [78 1 1 1 0]
+  }
+  metric {
+    id			    436
+    baseObjs		    [437]
+    dataIdx		    [235 233]
+    justifiedDataIdx	    [236 234]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    437
+    modelcov		    1
+    slsfobj		    83
+    relopChkExprIdx	    -1
+    descriptor		    438
+    dc			    [1 0 237 0]
+  }
+  message {
+    id			    438
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    439
+    modelcov		    1
+    slsfobj		    84
+    cov			    [80 1 1 1 0]
+  }
+  metric {
+    id			    440
+    baseObjs		    [441]
+    dataIdx		    [240 238]
+    justifiedDataIdx	    [241 239]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    441
+    modelcov		    1
+    slsfobj		    84
+    relopChkExprIdx	    -1
+    descriptor		    442
+    dc			    [1 0 242 0]
+  }
+  message {
+    id			    442
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    443
+    modelcov		    1
+    slsfobj		    85
+    cov			    [82 1 1 1 0]
+  }
+  metric {
+    id			    444
+    baseObjs		    [445]
+    dataIdx		    [245 243]
+    justifiedDataIdx	    [246 244]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    445
+    modelcov		    1
+    slsfobj		    85
+    relopChkExprIdx	    -1
+    descriptor		    446
+    dc			    [1 0 247 0]
+  }
+  message {
+    id			    446
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    447
+    modelcov		    1
+    slsfobj		    86
+    cov			    [84 1 1 1 0]
+  }
+  metric {
+    id			    448
+    baseObjs		    [449]
+    dataIdx		    [250 248]
+    justifiedDataIdx	    [251 249]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    449
+    modelcov		    1
+    slsfobj		    86
+    relopChkExprIdx	    -1
+    descriptor		    450
+    dc			    [1 0 252 0]
+  }
+  message {
+    id			    450
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    451
+    modelcov		    1
+    slsfobj		    87
+    cov			    [86 1 1 1 0]
+  }
+  metric {
+    id			    452
+    baseObjs		    [453]
+    dataIdx		    [255 253]
+    justifiedDataIdx	    [256 254]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    453
+    modelcov		    1
+    slsfobj		    87
+    relopChkExprIdx	    -1
+    descriptor		    454
+    dc			    [1 0 257 0]
+  }
+  message {
+    id			    454
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    455
+    modelcov		    1
+    slsfobj		    88
+    cov			    [88 1 1 1 0]
+  }
+  metric {
+    id			    456
+    baseObjs		    [457]
+    dataIdx		    [260 258]
+    justifiedDataIdx	    [261 259]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    457
+    modelcov		    1
+    slsfobj		    88
+    relopChkExprIdx	    -1
+    descriptor		    458
+    dc			    [1 0 262 0]
+  }
+  message {
+    id			    458
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+  sigranger {
+    id			    459
+    modelcov		    1
+    slsfobj		    89
+    cov			    [90 1 1 1 0]
+  }
+  metric {
+    id			    460
+    baseObjs		    [461]
+    dataIdx		    [265 263]
+    justifiedDataIdx	    [266 264]
+    dataCnt		    [1 1 -1 -1]
+    dataWidth		    6
+  }
+  decision {
+    id			    461
+    modelcov		    1
+    slsfobj		    89
+    relopChkExprIdx	    -1
+    descriptor		    462
+    dc			    [1 0 267 0]
+  }
+  message {
+    id			    462
+    keyNum		    24
+    txtParams		    "executed"
+    startChar		    -1
+  }
+}

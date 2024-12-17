@@ -14,17 +14,11 @@ function plot_integration_test_results(out, testcase)
     ax(idx) = subplot(Nrows, Ncols, idx); idx=idx+1; hold on
     plotSimInputSignal('target_temperature')
 
-    %ax(idx) = subplot(Nrows, Ncols, idx); idx=idx+1; hold on
-    %plotSimInputSignal('T_i_start')
-
-    %ax(idx) = subplot(Nrows, Ncols, idx); idx=idx+1; hold on
-    %plotSimInputSignal('T_a')
 
     % Plot outputs
     ax(idx) = subplot(Nrows, Ncols, idx); idx=idx+1; hold on
-    %plotSimOutputSignal(out.integration_sim, 'inside_temperature')
     plot(out.integration_sim)
-    title("inside_temperature")
+    title("inside\_temperature")
 
     linkaxes(ax, 'x');
 end
