@@ -2,11 +2,11 @@ disp(['### Running ' mfilename '.m'])
 
 % Run test 1
 results = runTest('Klimaanlage_SIL', 'qualification_test_01');
-plot_qualification_test_results(results, 'qualification_test_01');
+plot_qualification_test_results_01(results, 'qualification_test_01: verify Req:3');
 
 % Run test 2
-% results = runTest('Klimaanlage_SIL', 'qualification_test_02');
-% plot_qualification_test_results(results, 'qualification_test_02');
+results = runTest('Klimaanlage_SIL', 'qualification_test_02');
+plot_qualification_test_results_02(results, 'qualification_test_02: verify Req:8');
 
 
 % Coverage report

@@ -9,7 +9,7 @@
  *
  * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Wed Dec 18 00:44:43 2024
+ * C source code generated on : Wed Dec 18 12:46:00 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -28,7 +28,7 @@ P_nucleoboard_ac_controll_softwar_T nucleoboard_ac_controll_softwar_DefaultP = {
   /* Variable: K_p
    * Referenced by: '<S2>/Constant'
    */
-  5000U,
+  1000U,
 
   /* Variable: T_n
    * Referenced by: '<S2>/Constant1'

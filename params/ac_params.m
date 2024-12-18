@@ -1,6 +1,6 @@
 C = 6000;           % J/°C
 R = 0.3;            % °C/W
-K_p = 5000;         % Regler parameter
+K_p = 1000;         % Regler parameter
 T_n = C * R;        % Regler parameter
 
 T_i_start = 10;     % Starttemperatur im Inenraum 

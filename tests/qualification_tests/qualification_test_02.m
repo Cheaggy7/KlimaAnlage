@@ -1,17 +1,16 @@
-Tend = 300;
+% Testfall: Requirement 8: Die Regelung der Innentemperatur muss mit einem on-off button gestoppt und gestartet werden können
+
+Tend = 100;
 
 % Choose variant subsystems
-vehTargetVehicleModelSwitch = 0; % 0=no target; 1=moving target vehicle
 sim_inputs_switch = 1;  % 0=use internal signals; 1=use mdl inputs
 
 % Set params of sim environment
-vehSpeedInit = 110/3.6; % (m/s)
+T_i_start = 10;                 % initiale Innentemperatur
+T_a = 5;                        % initiale Außentemperatur
 
 % Set input signals
-accPedal = genSignalStep([0 20 Tend], [0.5 0 0], 'accPedal');
-brkPedal = genSignalStep([0 Tend], [0 0], 'brkPedal');
-enableACC = genSignalStep([0 20 Tend], [0 1 1], 'enableACC');
-targetDistLevel = genSignalStep([0 Tend], [2 2], 'targetDistLevel');
-% v_sRefExt = genSignalSine(0, Tend, accTs, 30/3.6, 150/3.6, 0.01, 0, 'v_sRefExt');
-v_sRefExt = genSignalStep([0 Tend], [150 150]/3.6, 'v_sRefExt');
+on_off_button = genSignalStep([0 20 40 60 80 Tend], [1 0 0 0 1 1], 'on_off_button', 'boolean');                     % 1 = on (change temperature); 0 = off (don't change temperature)
+target_temperature = genSignalStep([0 20 40 60 80 Tend], [16 16 25 25 25 25], 'target_temperature', 'uint16');      % (°C)
+
 
