@@ -9,7 +9,7 @@
  *
  * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Wed Dec 18 12:46:00 2024
+ * C source code generated on : Wed Dec 18 17:08:51 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -47,9 +47,9 @@
       &nucleoboard_ac_controll_softwar_DefaultP);
 
     /* model checksums */
-    ssSetChecksumVal(rts, 0, 3459357390U);
-    ssSetChecksumVal(rts, 1, 398286419U);
-    ssSetChecksumVal(rts, 2, 1548525518U);
-    ssSetChecksumVal(rts, 3, 897951353U);
+    ssSetChecksumVal(rts, 0, 3367073584U);
+    ssSetChecksumVal(rts, 1, 3726743285U);
+    ssSetChecksumVal(rts, 2, 453809037U);
+    ssSetChecksumVal(rts, 3, 2091973323U);
   }
 }

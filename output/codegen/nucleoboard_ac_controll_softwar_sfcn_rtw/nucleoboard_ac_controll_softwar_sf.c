@@ -9,7 +9,7 @@
  *
  * Model version              : 1.49
  * Simulink Coder version : 23.2 (R2023b) 01-Aug-2023
- * C source code generated on : Wed Dec 18 12:46:00 2024
+ * C source code generated on : Wed Dec 18 17:08:51 2024
  *
  * Target selection: rtwsfcn.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -259,7 +259,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     /* End of MATLAB Function: '<S10>/seg_display_controller' */
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion'
+     *  DataTypeConversion: '<S10>/Data Type Conversion10'
      */
     _rtB->AND1 = (rtb_segment[6] != 0);
 
@@ -267,7 +267,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     ((boolean_T *)ssGetOutputPortSignal(S, 1))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion1'
+     *  DataTypeConversion: '<S10>/Data Type Conversion11'
      */
     _rtB->AND1 = (rtb_segment[5] != 0);
 
@@ -275,7 +275,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     ((boolean_T *)ssGetOutputPortSignal(S, 2))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion2'
+     *  DataTypeConversion: '<S10>/Data Type Conversion12'
      */
     _rtB->AND1 = (rtb_segment[4] != 0);
 
@@ -283,7 +283,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     ((boolean_T *)ssGetOutputPortSignal(S, 3))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion3'
+     *  DataTypeConversion: '<S10>/Data Type Conversion13'
      */
     _rtB->AND1 = (rtb_segment[3] != 0);
 
@@ -291,7 +291,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     ((boolean_T *)ssGetOutputPortSignal(S, 4))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion4'
+     *  DataTypeConversion: '<S10>/Data Type Conversion14'
      */
     _rtB->AND1 = (rtb_segment[2] != 0);
 
@@ -299,7 +299,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     ((boolean_T *)ssGetOutputPortSignal(S, 5))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion5'
+     *  DataTypeConversion: '<S10>/Data Type Conversion8'
      */
     _rtB->AND1 = (rtb_segment[1] != 0);
 
@@ -307,7 +307,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     ((boolean_T *)ssGetOutputPortSignal(S, 6))[0] = _rtB->AND1;
 
     /* Logic: '<S3>/AND1' incorporates:
-     *  DataTypeConversion: '<S10>/Data Type Conversion6'
+     *  DataTypeConversion: '<S10>/Data Type Conversion9'
      */
     _rtB->AND1 = (rtb_segment[0] != 0);
 
@@ -370,9 +370,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     _rtB->DataTypeConversion = (int32_T)floor(_rtB->Switch);
 
     /* If: '<S5>/If' */
-    ((int8_T *)ssGetDWork(S, 1))[0] = -1;
-    if ((_rtB->DataTypeConversion < 5) || (_rtB->DataTypeConversion > -5)) {
+    if ((_rtB->DataTypeConversion < -5) || (_rtB->DataTypeConversion > 5)) {
       ((int8_T *)ssGetDWork(S, 1))[0] = 0;
+    } else {
+      ((int8_T *)ssGetDWork(S, 1))[0] = 1;
 
       /* Outputs for IfAction SubSystem: '<S5>/If Action Subsystem1' incorporates:
        *  ActionPort: '<S7>/Action Port'
@@ -394,9 +395,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
       ssGetInputPortSignalPtrs(S, 0))[0]);
 
     /* If: '<S6>/If' */
-    ((int8_T *)ssGetDWork(S, 2))[0] = -1;
-    if ((_rtB->DataTypeConversion < 50) || (_rtB->DataTypeConversion > -20)) {
+    if ((_rtB->DataTypeConversion < -20) || (_rtB->DataTypeConversion > 50)) {
       ((int8_T *)ssGetDWork(S, 2))[0] = 0;
+    } else {
+      ((int8_T *)ssGetDWork(S, 2))[0] = 1;
 
       /* Outputs for IfAction SubSystem: '<S6>/If Action Subsystem1' incorporates:
        *  ActionPort: '<S8>/Action Port'
